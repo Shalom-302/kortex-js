@@ -54,7 +54,7 @@ export default async function ServicesPage({ params }: PageProps<"/[locale]/serv
         </div>
 
         <Reveal className="mt-12 max-w-2xl">
-          <p className="text-sm leading-relaxed text-grey-500">{t("pricingNote")}</p>
+          <p className="text-sm leading-relaxed text-grey-500">{t("quoteNote")}</p>
         </Reveal>
       </div>
 

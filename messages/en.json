@@ -168,13 +168,13 @@
   "services": {
     "meta": {
       "title": "Our services",
-      "description": "Logos, visual identity, motion design, websites, apps, AI solutions, consulting and training: KORTEX offers and indicative prices."
+      "description": "Logos, visual identity, motion design, websites, apps, AI solutions, consulting and training: KORTEX offers, quoted on request."
     },
     "eyebrow": "Our services",
-    "title": "Clear offers, readable prices.",
-    "text": "The services of KORTEX’s three operational universes. Each project is then quoted according to its scope.",
+    "title": "Clear offers, every project tailored.",
+    "text": "The services of KORTEX’s three operational universes. Each project is quoted on request, according to its scope.",
     "seeDetails": "See details",
-    "pricingNote": "Indicative prices, given as “from” prices. Each project is quoted according to its scope, complexity, deliverables and timeline."
+    "quoteNote": "All our services are quoted on request. Each project is scoped, then priced according to your goals, its complexity, deliverables and timeline."
   },
   "companyFacts": {
     "company": "Company",

@@ -28,7 +28,7 @@ app/
 │   └── (marketing)/          # header + footer
 │       ├── page.tsx          # homepage
 │       ├── universes/        # Nos univers (DESIGN, AI, TRAINING + écosystème en expansion)
-│       ├── services/         # Nos services et tarifs indicatifs
+│       ├── services/         # Nos services (sur devis)
 │       ├── insights/         # blog MDX
 │       ├── about/ careers/ contact/ legal/ privacy/
 │       └── not-found.tsx     # 404 bilingue
@@ -49,7 +49,7 @@ proxy.ts     # détection de langue et redirection /fr | /en
 | --- | --- |
 | Textes d'interface | `messages/fr.json` et `messages/en.json` (mêmes clés) |
 | Univers (principaux / en expansion) | `data/universes.ts` |
-| Offres et tarifs | `data/services.ts` |
+| Offres | `data/services.ts` |
 | Articles | `content/insights/<fr\|en>/<slug>.mdx` — même slug dans les deux langues |
 | Photos | `data/images.ts` |
 | Email, téléphone, infos société, budgets | `lib/constants.ts` |

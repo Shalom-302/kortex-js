@@ -168,13 +168,13 @@
   "services": {
     "meta": {
       "title": "Nos services",
-      "description": "Logo, identité visuelle, motion design, sites web, applications, solutions IA, consultation et formation : les offres et tarifs indicatifs de KORTEX."
+      "description": "Logo, identité visuelle, motion design, sites web, applications, solutions IA, consultation et formation : les offres de KORTEX, sur devis."
     },
     "eyebrow": "Nos services",
-    "title": "Des offres claires, des prix lisibles.",
-    "text": "Les services des trois univers opérationnels de KORTEX. Chaque projet est ensuite chiffré selon son périmètre.",
+    "title": "Des offres claires, chaque projet sur mesure.",
+    "text": "Les services des trois univers opérationnels de KORTEX. Chaque projet est chiffré sur devis, selon son périmètre.",
     "seeDetails": "Voir le détail",
-    "pricingNote": "Tarifs indicatifs, exprimés en prix « à partir de ». Chaque projet est chiffré selon son périmètre, sa complexité, ses livrables et ses délais."
+    "quoteNote": "Toutes nos prestations sont sur devis. Chaque projet est cadré puis chiffré selon vos objectifs, sa complexité, ses livrables et ses délais."
   },
   "companyFacts": {
     "company": "Entreprise",

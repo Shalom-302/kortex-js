@@ -43,7 +43,7 @@ export async function Services() {
       </ul>
 
       <Reveal className="mt-12 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-        <p className="max-w-xl text-sm text-grey-500">{ts("pricingNote")}</p>
+        <p className="max-w-xl text-sm text-grey-500">{ts("quoteNote")}</p>
         <ButtonLink href="/services" variant="secondary" arrow>
           {t("cta")}
         </ButtonLink>
