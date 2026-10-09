@@ -1,6 +1,8 @@
 services:
   kortex-site:
     image: ghcr.io/shalom-302/kortex-js:latest
+    # Always fetch the newest image on deploy; otherwise the cached :latest is reused.
+    pull_policy: always
     restart: unless-stopped
     environment:
       NODE_ENV: production
