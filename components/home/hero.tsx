@@ -3,6 +3,7 @@ import { ButtonLink } from "@/components/ui/button";
 import { Reveal } from "@/components/shared/reveal";
 import { SplitText } from "@/components/shared/split-text";
 import { HeroParallax } from "./hero-parallax";
+import { HeroWordmark } from "./hero-wordmark";
 import { HeroScene } from "./hero-scene";
 
 export async function Hero() {
@@ -27,12 +28,7 @@ export async function Hero() {
             </p>
           </Reveal>
           <h1 className="mt-8">
-            <SplitText
-              immediate
-              delay={0.1}
-              text="KORTEX"
-              className="block text-[clamp(4rem,15vw,12.5rem)] leading-[0.82] font-semibold tracking-[-0.055em]"
-            />
+            <HeroWordmark className="h-[clamp(4.5rem,13vw,10.5rem)] w-auto max-w-full" />
             <SplitText
               immediate
               delay={0.35}

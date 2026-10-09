@@ -2,6 +2,7 @@
 
 import { useEffect, useState, type ReactNode } from "react";
 import { motion, useReducedMotion } from "motion/react";
+import { Wordmark } from "@/components/brand/wordmark";
 
 declare global {
   interface Window {
@@ -36,7 +37,7 @@ export default function Template({ children }: { children: ReactNode }) {
             animate={{ opacity: 0, scale: 0.92 }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
           >
-            <span className="text-lg font-semibold tracking-[0.18em]">KORTEX</span>
+            <Wordmark className="h-10 w-auto" />
           </motion.span>
         </motion.div>
       )}

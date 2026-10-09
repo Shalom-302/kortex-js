@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "motion/react";
-import { K_PATH } from "@/components/brand/k-mark";
+import { WORDMARK_PATH } from "@/components/brand/wordmark";
 
 type OrbitProps = {
   core: string[];
@@ -49,10 +49,8 @@ export function VisionOrbit({ core, expansion, className }: OrbitProps) {
       {/* Centre */}
       <motion.g {...beat(0)}>
         <circle r="62" fill="currentColor" fillOpacity="0.04" stroke="currentColor" strokeOpacity="0.2" />
-        <path d={K_PATH} fill="currentColor" transform="translate(-24 -30) scale(2)" />
-        <text y="38" textAnchor="middle" fill="currentColor" fontSize="11" letterSpacing="3.5" fontWeight="600">
-          KORTEX
-        </text>
+        {/* Wordmark is 124.33 × 40 units: scale to ~96 wide, centred. */}
+        <path d={WORDMARK_PATH} fill="currentColor" fillRule="evenodd" transform="translate(-48 -15.44) scale(0.772)" />
       </motion.g>
 
       {/* Core universes */}

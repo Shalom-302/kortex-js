@@ -2,6 +2,7 @@ import { ImageResponse } from "next/og";
 import { getTranslations } from "next-intl/server";
 import { routing, type Locale } from "@/i18n/routing";
 import { K_PATH } from "@/components/brand/k-mark";
+import { WORDMARK_PATH, WORDMARK_VIEWBOX } from "@/components/brand/wordmark";
 
 export const alt = "KORTEX — Technologie • Créativité • Expériences";
 export const size = { width: 1200, height: 630 };
@@ -45,7 +46,9 @@ export default async function OpengraphImage({ params }: { params: Promise<{ loc
           KORTEX DIGITAL
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ fontSize: 150, fontWeight: 700, lineHeight: 0.9, letterSpacing: "-0.05em" }}>KORTEX</div>
+          <svg width="560" height="180" viewBox={WORDMARK_VIEWBOX}>
+            <path d={WORDMARK_PATH} fill="#fff" fillRule="evenodd" />
+          </svg>
           <div style={{ marginTop: 28, fontSize: 40, color: "#d4d4d4", maxWidth: 820 }}>{t("title")}</div>
         </div>
         <div style={{ fontSize: 22, color: "#a3a3a3", letterSpacing: 3, textTransform: "uppercase" }}>
