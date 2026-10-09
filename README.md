@@ -30,12 +30,14 @@ app/
 │       ├── universes/        # Nos univers (DESIGN, AI, TRAINING + écosystème en expansion)
 │       ├── services/         # Nos services (sur devis)
 │       ├── insights/         # blog MDX
+│       ├── kortexisme/       # manifeste (content/kortexisme)
 │       ├── about/ careers/ contact/ legal/ privacy/
 │       └── not-found.tsx     # 404 bilingue
 ├── api/contact/route.ts      # formulaire → Resend
 ├── sitemap.ts  robots.ts  icon.svg
 components/  ui/ layout/ home/ solutions/ work/ contact/ shared/
 content/insights/{fr,en}/*.mdx
+content/kortexisme/{fr,en}.mdx
 data/        universes.ts services.ts insights.ts images.ts
 i18n/        routing.ts request.ts navigation.ts
 messages/    fr.json en.json   # tous les textes d'interface
@@ -50,6 +52,8 @@ proxy.ts     # détection de langue et redirection /fr | /en
 | Textes d'interface | `messages/fr.json` et `messages/en.json` (mêmes clés) |
 | Univers (principaux / en expansion) | `data/universes.ts` |
 | Offres | `data/services.ts` |
+| Manifeste Kortexisme | `content/kortexisme/<fr\|en>.mdx` |
+| Logo (K) | `public/logo/Kimage.png` → `components/brand/k-geometry.ts` (tracé vectoriel) |
 | Articles | `content/insights/<fr\|en>/<slug>.mdx` — même slug dans les deux langues |
 | Photos | `data/images.ts` |
 | Email, téléphone, infos société, budgets | `lib/constants.ts` |

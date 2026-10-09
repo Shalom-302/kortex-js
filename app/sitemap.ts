@@ -3,7 +3,7 @@ import { routing } from "@/i18n/routing";
 import { getInsights } from "@/data/insights";
 import { localizedUrl } from "@/lib/seo";
 
-const STATIC_PATHS = ["", "/universes", "/services", "/about", "/insights", "/careers", "/contact", "/legal", "/privacy"];
+const STATIC_PATHS = ["", "/universes", "/services", "/about", "/kortexisme", "/insights", "/careers", "/contact", "/legal", "/privacy"];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Articles exist per locale; list a path once per locale it is published in.

@@ -26,7 +26,8 @@
     "universesMenu": "KORTEX universes",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "primary": "Main navigation"
+    "primary": "Main navigation",
+    "kortexisme": "Kortexism"
   },
   "footer": {
     "tagline": "More than a company, an ecosystem. An Ivorian brand driven by technology.",
@@ -229,6 +230,23 @@
     },
     "originTitle": "Why KORTEX",
     "originText": "The cortex is the part of the brain that processes information and makes decisions. That is our role: turning ideas into products, services and experiences that work."
+  },
+  "kortexisme": {
+    "meta": {
+      "title": "Kortexism",
+      "description": "Kortexism, the founding philosophy of KORTEX: continuous learning, self-improvement and the responsible use of technology. Overcome Standard Limits."
+    },
+    "eyebrow": "Kortexism",
+    "title": "Overcoming the limits of the standard.",
+    "intro": "Kortexism is the philosophy behind KORTEX: keep learning, push past our limits, and use technology with humility, discernment and responsibility.",
+    "mottoLabel": "Our motto",
+    "mottoTranslation": "Go beyond the limits of the standard.",
+    "maxims": {
+      "humility": "Learn with humility.",
+      "discernment": "Innovate with discernment.",
+      "responsibility": "Grow with responsibility."
+    },
+    "aboutLink": "Discover Kortexism"
   },
   "insights": {
     "meta": {

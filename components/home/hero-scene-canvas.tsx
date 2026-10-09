@@ -2,17 +2,14 @@
 
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
+import { insideK } from "@/components/brand/k-mark";
 import { HeroK } from "./hero-k";
 
-// The K outline (24×24 grid, y pointing down), same geometry as K_PATH.
-const K_POLYGON: [number, number][] = [
-  [4, 2], [8.5, 2], [8.5, 10.6], [16.2, 2], [21.5, 2], [12.4, 12],
-  [21.5, 22], [16.2, 22], [8.5, 13.4], [8.5, 22], [4, 22],
-];
-const K_CENTER = { x: 12.75, y: 12 };
+const K_CENTER = { x: 12, y: 12 };
 const K_PARTICLES = 9000;
 const DUST_PARTICLES = 1400;
-const DEPTH = 2.2;
+// Thin circuit strokes: keep the cloud shallow so the K stays legible.
+const DEPTH = 1.2;
 
 function hasWebGL() {
   try {
@@ -23,16 +20,6 @@ function hasWebGL() {
   }
 }
 
-function insideK(x: number, y: number) {
-  let inside = false;
-  for (let i = 0, j = K_POLYGON.length - 1; i < K_POLYGON.length; j = i++) {
-    const [xi, yi] = K_POLYGON[i];
-    const [xj, yj] = K_POLYGON[j];
-    if (yi > y !== yj > y && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) inside = !inside;
-  }
-  return inside;
-}
-
 function buildGeometry() {
   const total = K_PARTICLES + DUST_PARTICLES;
   const target = new Float32Array(total * 3);
@@ -41,8 +28,8 @@ function buildGeometry() {
 
   let i = 0;
   while (i < K_PARTICLES) {
-    const x = 4 + Math.random() * 17.5;
-    const y = 2 + Math.random() * 20;
+    const x = 2 + Math.random() * 20;
+    const y = 1 + Math.random() * 22;
     if (!insideK(x, y)) continue;
     target.set([x - K_CENTER.x, -(y - K_CENTER.y), (Math.random() * 2 - 1) * DEPTH], i * 3);
     i++;

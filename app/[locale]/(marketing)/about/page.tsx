@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
 import { staticPageMetadata } from "@/lib/seo";
 import { KMark } from "@/components/brand/k-mark";
+import { ButtonLink } from "@/components/ui/button";
 import { CompanyFacts } from "@/components/shared/company-facts";
 import { CtaBand } from "@/components/shared/cta-band";
 import { Media } from "@/components/shared/media";
@@ -20,6 +21,7 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
   const locale = (await params).locale as Locale;
   setRequestLocale(locale);
   const t = await getTranslations("about");
+  const tk = await getTranslations("kortexisme");
 
   return (
     <>
@@ -78,6 +80,9 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
           <Reveal delay={0.08} className="md:col-span-7 md:col-start-6">
             <p className="eyebrow text-grey-500">{t("originTitle")}</p>
             <p className="mt-6 text-title leading-snug font-medium text-pretty">{t("originText")}</p>
+            <ButtonLink href="/kortexisme" variant="secondary" arrow className="mt-10">
+              {tk("aboutLink")}
+            </ButtonLink>
           </Reveal>
         </div>
       </Section>

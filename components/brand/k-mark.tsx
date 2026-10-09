@@ -1,7 +1,21 @@
 import type { SVGProps } from "react";
+import { K_POLYGONS } from "./k-geometry";
 
-/** The KORTEX "K", drawn on a 24×24 grid as a single closed outline. */
-export const K_PATH = "M4 2H8.5V10.6L16.2 2H21.5L12.4 12L21.5 22H16.2L8.5 13.4V22H4Z";
+/** The KORTEX "K" (circuit traces ending in nodes), on a 24×24 grid, centred on (12, 12). */
+export const K_PATH = K_POLYGONS.map((poly) => `M${poly.map(([x, y]) => `${x} ${y}`).join("L")}Z`).join("");
+
+/** Even-odd test against every stroke of the K, in grid units. */
+export function insideK(x: number, y: number) {
+  let inside = false;
+  for (const poly of K_POLYGONS) {
+    for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) {
+      const [xi, yi] = poly[i];
+      const [xj, yj] = poly[j];
+      if (yi > y !== yj > y && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) inside = !inside;
+    }
+  }
+  return inside;
+}
 
 /** Solid K symbol. Inherits `currentColor`; decorative unless given a `title`. */
 export function KMark({ title, ...props }: SVGProps<SVGSVGElement> & { title?: string }) {

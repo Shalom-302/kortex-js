@@ -39,7 +39,7 @@ export default async function OpengraphImage({ params }: { params: Promise<{ loc
           viewBox="0 0 24 24"
           style={{ position: "absolute", right: -120, top: -45 }}
         >
-          <path d={K_PATH} fill="none" stroke="#3a3a3a" strokeWidth="0.06" />
+          <path d={K_PATH} fill="#262626" />
         </svg>
         <div style={{ display: "flex", alignItems: "center", gap: 16, fontSize: 26, fontWeight: 600, letterSpacing: 4 }}>
           KORTEX DIGITAL

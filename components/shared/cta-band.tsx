@@ -51,7 +51,7 @@ export async function CtaBand() {
       <div className="container-page py-28 md:py-44">
         <Reveal>
           <p className="eyebrow flex items-center gap-3 text-grey-500">
-            <KMark className="size-3" />
+            <KMark className="size-4" />
             {t("eyebrow")}
           </p>
         </Reveal>

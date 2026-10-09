@@ -18,6 +18,7 @@ export async function Footer() {
     { href: "/universes", label: nav("universes") },
     { href: "/services", label: nav("services") },
     { href: "/about", label: nav("about") },
+    { href: "/kortexisme", label: nav("kortexisme") },
     { href: "/insights", label: nav("insights") },
     { href: "/careers", label: nav("careers") },
     { href: "/contact", label: nav("contact") },

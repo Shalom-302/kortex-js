@@ -24,7 +24,7 @@ export function KAtom({ className }: { className?: string }) {
     <svg viewBox="-300 -300 600 600" aria-hidden className={className} fill="none">
       {/* Nucleus: the K, turning slowly around its centre. */}
       <g className="animate-drift" style={{ animationDuration: "48s", transformOrigin: "0 0" }}>
-        <path d={K_PATH} fill="currentColor" transform="translate(-102 -96) scale(8)" />
+        <path d={K_PATH} fill="currentColor" transform="translate(-96 -96) scale(8)" />
       </g>
 
       {ORBITS.map((orbit) => (

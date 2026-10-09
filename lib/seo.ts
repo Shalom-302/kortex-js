@@ -61,7 +61,7 @@ export function pageMetadata({
   };
 }
 
-type StaticPage = "universes" | "services" | "about" | "insights" | "careers" | "contact" | "legal" | "privacy";
+type StaticPage = "universes" | "services" | "about" | "kortexisme" | "insights" | "careers" | "contact" | "legal" | "privacy";
 
 /** generateMetadata body for a static page whose copy lives in messages under `<page>.meta`. */
 export async function staticPageMetadata(

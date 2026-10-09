@@ -15,7 +15,7 @@ export async function Manifesto() {
       <div className="grid gap-10 md:grid-cols-12">
         <Reveal className="md:col-span-3 md:pt-3">
           <p className="eyebrow flex items-center gap-3 text-grey-500">
-            <KMark className="size-3" />
+            <KMark className="size-4" />
             {t("eyebrow")}
           </p>
         </Reveal>

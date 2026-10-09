@@ -3,4 +3,5 @@ export const NAV_ITEMS = [
   { href: "/universes", key: "universes" },
   { href: "/services", key: "services" },
   { href: "/about", key: "about" },
+  { href: "/kortexisme", key: "kortexisme" },
 ] as const;
