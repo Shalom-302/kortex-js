@@ -1,0 +1,17 @@
+services:
+  kortex-site:
+    image: ghcr.io/shalom-302/kortex-js:latest
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      RESEND_API_KEY: ${RESEND_API_KEY}
+      CONTACT_TO_EMAIL: ${CONTACT_TO_EMAIL:-contact@kortex.digital}
+      CONTACT_FROM_EMAIL: ${CONTACT_FROM_EMAIL:-KORTEX Digital <noreply@kortex.digital>}
+    expose:
+      - "3000"
+    networks:
+      - dokploy-network
+
+networks:
+  dokploy-network:
+    external: true

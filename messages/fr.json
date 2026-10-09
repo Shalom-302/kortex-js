@@ -1,0 +1,388 @@
+{
+  "meta": {
+    "title": "KORTEX | Technologie • Créativité • Expériences",
+    "description": "KORTEX est une marque ivoirienne qui utilise la technologie pour créer des produits, des services et des expériences dans plusieurs univers : design, intelligence artificielle, formation, et au-delà."
+  },
+  "common": {
+    "skipToContent": "Aller au contenu",
+    "startProject": "Démarrer un projet",
+    "contactUs": "Nous contacter",
+    "requestQuote": "Demander un devis",
+    "learnMore": "En savoir plus",
+    "backHome": "Retour à l’accueil",
+    "signature": "Technologie • Créativité • Expériences",
+    "imagePending": "Visuel à venir",
+    "language": "Langue",
+    "switchTo": "Passer en {language}"
+  },
+  "nav": {
+    "home": "Accueil",
+    "universes": "Nos univers",
+    "services": "Nos services",
+    "about": "À propos",
+    "insights": "Insights",
+    "careers": "Carrières",
+    "contact": "Contact",
+    "universesMenu": "Univers KORTEX",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "primary": "Navigation principale"
+  },
+  "footer": {
+    "tagline": "Plus qu’une entreprise, un écosystème. Une marque ivoirienne portée par la technologie.",
+    "signature": "Technologie • Créativité • Expériences",
+    "universes": "Univers",
+    "expansion": "Écosystème en expansion",
+    "pages": "Navigation",
+    "contact": "Contact",
+    "legal": "Mentions légales",
+    "privacy": "Confidentialité",
+    "rights": "Tous droits réservés.",
+    "photoCredits": "Photographies temporaires : Unsplash."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Abidjan, Côte d’Ivoire",
+      "title": "Des idées d’aujourd’hui. Des possibilités demain.",
+      "subtitle": "KORTEX est une marque ivoirienne qui utilise la technologie pour créer des produits, des services et des expériences dans plusieurs univers.",
+      "primary": "Découvrir KORTEX",
+      "scroll": "Défiler"
+    },
+    "manifesto": {
+      "eyebrow": "La marque",
+      "title": "Plus qu’une entreprise, un écosystème.",
+      "text": "KORTEX ne se limite pas à vendre de la technologie. La technologie est notre moteur : elle nous permet de créer, sous une même identité, dans des univers très différents.",
+      "createsLabel": "Ce que nous créons",
+      "creates": {
+        "products": "Des produits",
+        "services": "Des services",
+        "experiences": "Des expériences",
+        "communities": "Des communautés"
+      }
+    },
+    "universes": {
+      "eyebrow": "Nos univers",
+      "title": "Un écosystème. Plusieurs mouvements.",
+      "text": "Trois univers portent aujourd’hui l’activité de KORTEX. D’autres se construisent, à leur rythme, autour du même socle technologique.",
+      "cta": "Explorer tous les univers"
+    },
+    "vision": {
+      "eyebrow": "Notre vision",
+      "title": "Une marque. Plusieurs mouvements.",
+      "text": "KORTEX commence avec la technologie, mais notre ambition va au-delà de la technologie. Nous voulons construire une marque capable de créer des produits, des services, des expériences et des communautés dans plusieurs univers.",
+      "ambition": "Construire une marque technologique africaine capable d’évoluer dans plusieurs univers.",
+      "diagramLabel": "Schéma : KORTEX au centre ; DESIGN, AI et TRAINING sur une première orbite ; les univers en développement sur une orbite extérieure."
+    },
+    "services": {
+      "eyebrow": "Nos services",
+      "title": "Des offres claires pour démarrer.",
+      "text": "Les univers opérationnels de KORTEX, et ce qu’ils peuvent faire pour vous dès aujourd’hui.",
+      "cta": "Tous les services"
+    },
+    "approach": {
+      "eyebrow": "Notre approche",
+      "title": "Cinq temps. Une même exigence.",
+      "text": "Quel que soit l’univers, chaque projet suit le même chemin, du premier échange à la suite.",
+      "steps": {
+        "understand": {
+          "title": "Comprendre",
+          "text": "Écouter, analyser le contexte, les utilisateurs et les objectifs avant toute décision."
+        },
+        "design": {
+          "title": "Concevoir",
+          "text": "Imaginer la solution, l’identité et l’expérience. Prototyper, tester, ajuster."
+        },
+        "build": {
+          "title": "Construire",
+          "text": "Produire avec rigueur : un travail soigné, des livrables vérifiés, une qualité constante."
+        },
+        "deploy": {
+          "title": "Déployer",
+          "text": "Mettre en ligne, livrer, former et accompagner la prise en main."
+        },
+        "evolve": {
+          "title": "Faire évoluer",
+          "text": "Mesurer, améliorer et faire grandir le projet dans le temps."
+        }
+      }
+    },
+    "about": {
+      "eyebrow": "À propos",
+      "title": "KORTEX DIGITAL porte la marque KORTEX.",
+      "text": "Une entreprise ivoirienne, fondée à Abidjan, pour développer des solutions numériques et construire, à terme, un écosystème de marques et d’expériences sous une même identité.",
+      "cta": "En savoir plus"
+    }
+  },
+  "universes": {
+    "meta": {
+      "title": "Nos univers",
+      "description": "KORTEX DESIGN, KORTEX AI, KORTEX TRAINING et les univers en expansion de l’écosystème KORTEX."
+    },
+    "eyebrow": "Nos univers",
+    "title": "Un écosystème. Plusieurs mouvements.",
+    "text": "La technologie constitue le socle ; les univers sont les mouvements de la marque. Chacun a son public et son offre, tous partagent l’identité KORTEX.",
+    "coreTitle": "Univers principaux",
+    "expansionTitle": "Écosystème en expansion",
+    "expansionBadge": "Univers en expansion",
+    "expansionText": "Ces univers se construisent progressivement, selon la demande et nos capacités. Ils ne sont pas encore ouverts.",
+    "disclaimer": "Les univers KORTEX sont des axes de marque portés par KORTEX DIGITAL, et non des sociétés distinctes.",
+    "discover": "Découvrir",
+    "seeServices": "Voir les services",
+    "status": {
+      "active": "Univers actif",
+      "development": "En développement"
+    },
+    "families": {
+      "technology": "Technologie",
+      "experiences": "Expériences"
+    },
+    "roadmap": {
+      "eyebrow": "Feuille de route",
+      "title": "Construire aujourd’hui. Créer les univers de demain.",
+      "phase": "Phase {n}",
+      "current": "En cours",
+      "phases": {
+        "foundation": {
+          "title": "Fondation",
+          "text": "Structurer KORTEX DIGITAL, consolider DESIGN, AI et TRAINING, servir les premiers clients."
+        },
+        "tech": {
+          "title": "Expansion technologique",
+          "text": "Développer DEV, SECURITY, CLOUD et DATA selon la demande."
+        },
+        "products": {
+          "title": "Création de produits",
+          "text": "Transformer les besoins récurrents en produits numériques et SaaS."
+        },
+        "universes": {
+          "title": "Nouveaux univers",
+          "text": "Déployer progressivement MEDIA, PLAY, LOISIR, SPORT, CULTURE, EXPERIENCE et TRAVEL."
+        },
+        "ecosystem": {
+          "title": "Écosystème",
+          "text": "Faire travailler les univers ensemble : une marque multi-univers portée par la technologie."
+        }
+      }
+    }
+  },
+  "services": {
+    "meta": {
+      "title": "Nos services",
+      "description": "Logo, identité visuelle, motion design, sites web, applications, solutions IA, consultation et formation : les offres et tarifs indicatifs de KORTEX."
+    },
+    "eyebrow": "Nos services",
+    "title": "Des offres claires, des prix lisibles.",
+    "text": "Les services des trois univers opérationnels de KORTEX. Chaque projet est ensuite chiffré selon son périmètre.",
+    "seeDetails": "Voir le détail",
+    "pricingNote": "Tarifs indicatifs, exprimés en prix « à partir de ». Chaque projet est chiffré selon son périmètre, sa complexité, ses livrables et ses délais."
+  },
+  "companyFacts": {
+    "company": "Entreprise",
+    "brand": "Marque",
+    "legalForm": "Forme juridique",
+    "founder": "Fondateur & gérant",
+    "headquarters": "Siège"
+  },
+  "contactBand": {
+    "eyebrow": "Contact",
+    "title": "Construisons quelque chose.",
+    "text": "Un projet, une idée, une question ? Parlons-en. Nous revenons vers vous rapidement.",
+    "person": "Interlocuteur",
+    "role": "Fondateur — KORTEX DIGITAL",
+    "phone": "Téléphone / WhatsApp",
+    "whatsapp": "Écrire sur WhatsApp",
+    "email": "Email",
+    "location": "Localisation"
+  },
+  "about": {
+    "meta": {
+      "title": "À propos",
+      "description": "KORTEX DIGITAL, SARL unipersonnelle basée à Abidjan, est l’entreprise qui porte la marque KORTEX."
+    },
+    "eyebrow": "À propos",
+    "title": "L’entreprise derrière la marque.",
+    "intro": "KORTEX DIGITAL est une entreprise technologique ivoirienne. Elle porte la marque KORTEX et développe ses univers : le design, l’intelligence artificielle, la formation, et demain bien d’autres.",
+    "visionTitle": "Vision",
+    "visionStatement": "Construire une marque technologique africaine capable d’évoluer dans plusieurs univers.",
+    "visionText": "KORTEX part d’un savoir-faire technologique et veut progressivement le transformer en une plateforme de création de produits, de services et d’expériences. Chaque univers a son marché et son offre, tout en profitant des capacités technologiques et créatives de l’écosystème.",
+    "companyTitle": "KORTEX DIGITAL",
+    "companyStatement": "Une marque, une entreprise.",
+    "companyText": "KORTEX est la marque ; KORTEX DIGITAL est l’entreprise qui la porte, depuis Abidjan, avec une ambition au-delà du marché ivoirien.",
+    "valuesTitle": "Ce qui nous guide",
+    "values": {
+      "clarity": {
+        "title": "Clarté",
+        "text": "Des solutions simples à comprendre, à utiliser et à faire évoluer."
+      },
+      "rigor": {
+        "title": "Rigueur",
+        "text": "Un travail soigné, des choix justifiés, des engagements tenus."
+      },
+      "transmission": {
+        "title": "Transmission",
+        "text": "Nous partageons ce que nous savons pour rendre chacun autonome."
+      },
+      "impact": {
+        "title": "Impact",
+        "text": "Chaque projet doit résoudre un problème réel."
+      }
+    },
+    "originTitle": "Pourquoi KORTEX",
+    "originText": "Le cortex est la partie du cerveau qui traite l’information et prend les décisions. C’est notre rôle : transformer des idées en produits, en services et en expériences qui fonctionnent."
+  },
+  "insights": {
+    "meta": {
+      "title": "Insights",
+      "description": "Articles et analyses de KORTEX sur la technologie, l’IA, le design et la création."
+    },
+    "eyebrow": "Insights",
+    "title": "Notes sur la technologie, la création et les univers KORTEX.",
+    "emptyTitle": "Premiers articles en préparation.",
+    "emptyText": "Nous publierons ici nos analyses et retours d’expérience. Revenez bientôt.",
+    "draft": "Brouillon — visible en développement uniquement",
+    "backToInsights": "Tous les articles",
+    "readingTime": "{minutes} min de lecture"
+  },
+  "careers": {
+    "meta": {
+      "title": "Carrières",
+      "description": "Rejoindre KORTEX DIGITAL à Abidjan : design, intelligence artificielle, développement et formation."
+    },
+    "eyebrow": "Carrières",
+    "title": "Construisons ensemble.",
+    "text": "KORTEX démarre. Nous cherchons des personnes exigeantes et curieuses, qui ont envie de construire une marque et ses univers.",
+    "lookingTitle": "Ce que nous recherchons",
+    "looking": {
+      "craft": "Le goût du travail bien fait",
+      "curiosity": "La curiosité pour les nouvelles technologies",
+      "ownership": "Le sens des responsabilités",
+      "sharing": "L’envie de transmettre"
+    },
+    "openingsTitle": "Postes ouverts",
+    "noOpenings": "Aucun poste ouvert pour le moment.",
+    "spontaneous": "Candidature spontanée",
+    "spontaneousText": "Envoyez-nous votre profil et quelques mots sur ce que vous aimeriez construire."
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact",
+      "description": "Parlez-nous de votre projet : design, intelligence artificielle, site web, application ou formation. KORTEX DIGITAL, Abidjan."
+    },
+    "eyebrow": "Contact",
+    "title": "Démarrons votre projet.",
+    "text": "Quelques informations nous aident à préparer un premier échange utile. Vous pouvez aussi nous appeler ou nous écrire sur WhatsApp.",
+    "directTitle": "Contact direct",
+    "fields": {
+      "name": "Nom complet",
+      "company": "Entreprise",
+      "email": "Email professionnel",
+      "phone": "Téléphone",
+      "need": "Type de besoin",
+      "message": "Décrivez votre projet",
+      "messagePlaceholder": "Contexte, objectifs, contraintes…",
+      "budget": "Budget indicatif",
+      "timeline": "Délai souhaité",
+      "consent": "J’accepte que KORTEX Digital utilise ces informations pour me recontacter, conformément à la <link>politique de confidentialité</link>.",
+      "optional": "optionnel",
+      "select": "Sélectionner"
+    },
+    "needs": {
+      "design": "KORTEX DESIGN",
+      "ai": "KORTEX AI",
+      "training": "KORTEX TRAINING",
+      "other": "Autre"
+    },
+    "submit": "Envoyer la demande",
+    "sending": "Envoi…",
+    "successTitle": "Merci, votre demande est bien envoyée.",
+    "successText": "Vous allez recevoir un email de confirmation. Nous revenons vers vous rapidement.",
+    "error": "L’envoi a échoué. Réessayez ou écrivez-nous directement à {email}.",
+    "rateLimited": "Trop de tentatives. Merci de réessayer dans quelques minutes.",
+    "errors": {
+      "name": "Indiquez votre nom.",
+      "email": "Indiquez un email valide.",
+      "phone": "Numéro de téléphone invalide.",
+      "need": "Choisissez un type de besoin.",
+      "message": "Décrivez votre projet en quelques phrases (20 caractères minimum).",
+      "budget": "Choisissez une fourchette de budget.",
+      "timeline": "Choisissez un délai.",
+      "consent": "Votre accord est nécessaire pour vous recontacter.",
+      "tooLong": "Texte trop long."
+    }
+  },
+  "email": {
+    "teamSubject": "Nouvelle demande — {name} ({need})",
+    "ackSubject": "Nous avons bien reçu votre demande",
+    "ackGreeting": "Bonjour {name},",
+    "ackBody": "Merci pour votre message. Notre équipe l’étudie et revient vers vous sous 48 h ouvrées.",
+    "ackSignature": "L’équipe KORTEX"
+  },
+  "legal": {
+    "meta": {
+      "title": "Mentions légales",
+      "description": "Mentions légales du site KORTEX — KORTEX DIGITAL."
+    },
+    "title": "Mentions légales",
+    "notice": "Le numéro RCCM sera ajouté dès réception.",
+    "sections": {
+      "publisher": {
+        "title": "Éditeur du site",
+        "body": "Raison sociale : KORTEX DIGITAL (marque KORTEX)\nForme juridique : SARL Unipersonnelle\nSiège social : Cocody, Angré Extension Château – Latrille-Bessikoi, Abidjan, Côte d’Ivoire\nImmatriculation (RCCM) : en cours\nTéléphone : 07 12 11 62 58\nEmail : {email}"
+      },
+      "director": {
+        "title": "Responsable de la publication",
+        "body": "Shalom Tehe, fondateur et gérant"
+      },
+      "host": {
+        "title": "Hébergement",
+        "body": "Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis — vercel.com"
+      },
+      "ip": {
+        "title": "Propriété intellectuelle",
+        "body": "L’ensemble des contenus de ce site (textes, visuels, logo « K », code) est la propriété de KORTEX DIGITAL, sauf mention contraire. Les photographies temporaires proviennent d’Unsplash et restent la propriété de leurs auteurs."
+      }
+    }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Politique de confidentialité",
+      "description": "Comment KORTEX DIGITAL collecte et utilise vos données personnelles."
+    },
+    "title": "Politique de confidentialité",
+    "notice": "La durée de conservation reste à confirmer par KORTEX DIGITAL.",
+    "sections": {
+      "controller": {
+        "title": "Responsable du traitement",
+        "body": "KORTEX DIGITAL, Cocody, Angré Extension Château – Latrille-Bessikoi, Abidjan, Côte d’Ivoire — {email}"
+      },
+      "data": {
+        "title": "Données collectées",
+        "body": "Via le formulaire de contact : nom, entreprise, email, téléphone, type de besoin, description du projet, budget indicatif et délai souhaité."
+      },
+      "purpose": {
+        "title": "Finalité",
+        "body": "Ces données servent uniquement à répondre à votre demande et à assurer le suivi commercial. Elles ne sont ni vendues ni cédées à des tiers."
+      },
+      "retention": {
+        "title": "Durée de conservation",
+        "body": "[Durée à compléter — par exemple 3 ans après le dernier contact.]"
+      },
+      "processors": {
+        "title": "Sous-traitants",
+        "body": "Hébergement : Vercel. Envoi des emails : Resend."
+      },
+      "rights": {
+        "title": "Vos droits",
+        "body": "Conformément à la loi ivoirienne n° 2013-450 relative à la protection des données à caractère personnel, vous disposez d’un droit d’accès, de rectification, d’opposition et de suppression. Écrivez-nous à {email}."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "body": "Ce site n’utilise qu’un cookie technique mémorisant votre langue. Aucun cookie publicitaire ou de mesure d’audience n’est déposé."
+      }
+    }
+  },
+  "notFound": {
+    "title": "Page introuvable.",
+    "text": "La page que vous cherchez n’existe pas ou a été déplacée."
+  }
+}

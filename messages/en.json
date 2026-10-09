@@ -1,0 +1,388 @@
+{
+  "meta": {
+    "title": "KORTEX | Technology • Creativity • Experiences",
+    "description": "KORTEX is an Ivorian brand that uses technology to create products, services and experiences across several universes: design, artificial intelligence, training, and beyond."
+  },
+  "common": {
+    "skipToContent": "Skip to content",
+    "startProject": "Start a project",
+    "contactUs": "Contact us",
+    "requestQuote": "Request a quote",
+    "learnMore": "Learn more",
+    "backHome": "Back to home",
+    "signature": "Technology • Creativity • Experiences",
+    "imagePending": "Visual coming soon",
+    "language": "Language",
+    "switchTo": "Switch to {language}"
+  },
+  "nav": {
+    "home": "Home",
+    "universes": "Our universes",
+    "services": "Our services",
+    "about": "About",
+    "insights": "Insights",
+    "careers": "Careers",
+    "contact": "Contact",
+    "universesMenu": "KORTEX universes",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "primary": "Main navigation"
+  },
+  "footer": {
+    "tagline": "More than a company, an ecosystem. An Ivorian brand driven by technology.",
+    "signature": "Technology • Creativity • Experiences",
+    "universes": "Universes",
+    "expansion": "Expanding ecosystem",
+    "pages": "Navigation",
+    "contact": "Contact",
+    "legal": "Legal notice",
+    "privacy": "Privacy",
+    "rights": "All rights reserved.",
+    "photoCredits": "Temporary photography: Unsplash."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Abidjan, Côte d’Ivoire",
+      "title": "Ideas for today. Possibilities for tomorrow.",
+      "subtitle": "KORTEX is an Ivorian brand that uses technology to create products, services and experiences across several universes.",
+      "primary": "Discover KORTEX",
+      "scroll": "Scroll"
+    },
+    "manifesto": {
+      "eyebrow": "The brand",
+      "title": "More than a company, an ecosystem.",
+      "text": "KORTEX doesn’t just sell technology. Technology is our engine: it lets us create, under one identity, across very different universes.",
+      "createsLabel": "What we create",
+      "creates": {
+        "products": "Products",
+        "services": "Services",
+        "experiences": "Experiences",
+        "communities": "Communities"
+      }
+    },
+    "universes": {
+      "eyebrow": "Our universes",
+      "title": "One ecosystem. Many movements.",
+      "text": "Three universes carry KORTEX’s activity today. Others are taking shape, at their own pace, on the same technology foundation.",
+      "cta": "Explore all universes"
+    },
+    "vision": {
+      "eyebrow": "Our vision",
+      "title": "One brand. Many movements.",
+      "text": "KORTEX starts with technology, but our ambition goes beyond technology. We want to build a brand able to create products, services, experiences and communities across several universes.",
+      "ambition": "Building an African technology brand able to grow across several universes.",
+      "diagramLabel": "Diagram: KORTEX at the centre; DESIGN, AI and TRAINING on an inner orbit; the universes in development on an outer orbit."
+    },
+    "services": {
+      "eyebrow": "Our services",
+      "title": "Clear offers to get started.",
+      "text": "KORTEX’s operational universes, and what they can do for you today.",
+      "cta": "All services"
+    },
+    "approach": {
+      "eyebrow": "Our approach",
+      "title": "Five steps. One standard.",
+      "text": "Whatever the universe, every project follows the same path, from the first conversation onwards.",
+      "steps": {
+        "understand": {
+          "title": "Understand",
+          "text": "Listen, and analyse the context, the users and the goals before any decision."
+        },
+        "design": {
+          "title": "Design",
+          "text": "Imagine the solution, the identity and the experience. Prototype, test, adjust."
+        },
+        "build": {
+          "title": "Build",
+          "text": "Produce with rigour: careful work, verified deliverables, consistent quality."
+        },
+        "deploy": {
+          "title": "Deploy",
+          "text": "Launch, deliver, train and support the handover."
+        },
+        "evolve": {
+          "title": "Evolve",
+          "text": "Measure, improve and grow the project over time."
+        }
+      }
+    },
+    "about": {
+      "eyebrow": "About",
+      "title": "KORTEX DIGITAL is the company behind KORTEX.",
+      "text": "An Ivorian company, founded in Abidjan, to build digital solutions and, over time, an ecosystem of brands and experiences under one identity.",
+      "cta": "Learn more"
+    }
+  },
+  "universes": {
+    "meta": {
+      "title": "Our universes",
+      "description": "KORTEX DESIGN, KORTEX AI, KORTEX TRAINING and the expanding universes of the KORTEX ecosystem."
+    },
+    "eyebrow": "Our universes",
+    "title": "One ecosystem. Many movements.",
+    "text": "Technology is the foundation; the universes are the brand’s movements. Each has its own audience and offer, all share the KORTEX identity.",
+    "coreTitle": "Core universes",
+    "expansionTitle": "Expanding ecosystem",
+    "expansionBadge": "Expanding universes",
+    "expansionText": "These universes are being built step by step, according to demand and our capacity. They are not open yet.",
+    "disclaimer": "KORTEX universes are brand lines carried by KORTEX DIGITAL, not separate companies.",
+    "discover": "Discover",
+    "seeServices": "See the services",
+    "status": {
+      "active": "Active universe",
+      "development": "In development"
+    },
+    "families": {
+      "technology": "Technology",
+      "experiences": "Experiences"
+    },
+    "roadmap": {
+      "eyebrow": "Roadmap",
+      "title": "Building today. Creating tomorrow’s universes.",
+      "phase": "Phase {n}",
+      "current": "Current",
+      "phases": {
+        "foundation": {
+          "title": "Foundation",
+          "text": "Structure KORTEX DIGITAL, consolidate DESIGN, AI and TRAINING, serve the first clients."
+        },
+        "tech": {
+          "title": "Technology expansion",
+          "text": "Develop DEV, SECURITY, CLOUD and DATA according to demand."
+        },
+        "products": {
+          "title": "Product creation",
+          "text": "Turn recurring needs into digital products and SaaS."
+        },
+        "universes": {
+          "title": "New universes",
+          "text": "Gradually roll out MEDIA, PLAY, LOISIR, SPORT, CULTURE, EXPERIENCE and TRAVEL."
+        },
+        "ecosystem": {
+          "title": "Ecosystem",
+          "text": "Make the universes work together: a multi-universe brand driven by technology."
+        }
+      }
+    }
+  },
+  "services": {
+    "meta": {
+      "title": "Our services",
+      "description": "Logos, visual identity, motion design, websites, apps, AI solutions, consulting and training: KORTEX offers and indicative prices."
+    },
+    "eyebrow": "Our services",
+    "title": "Clear offers, readable prices.",
+    "text": "The services of KORTEX’s three operational universes. Each project is then quoted according to its scope.",
+    "seeDetails": "See details",
+    "pricingNote": "Indicative prices, given as “from” prices. Each project is quoted according to its scope, complexity, deliverables and timeline."
+  },
+  "companyFacts": {
+    "company": "Company",
+    "brand": "Brand",
+    "legalForm": "Legal form",
+    "founder": "Founder & managing director",
+    "headquarters": "Headquarters"
+  },
+  "contactBand": {
+    "eyebrow": "Contact",
+    "title": "Let’s build something.",
+    "text": "A project, an idea, a question? Let’s talk. We get back to you quickly.",
+    "person": "Your contact",
+    "role": "Founder — KORTEX DIGITAL",
+    "phone": "Phone / WhatsApp",
+    "whatsapp": "Message on WhatsApp",
+    "email": "Email",
+    "location": "Location"
+  },
+  "about": {
+    "meta": {
+      "title": "About",
+      "description": "KORTEX DIGITAL, a single-member limited company based in Abidjan, is the company behind the KORTEX brand."
+    },
+    "eyebrow": "About",
+    "title": "The company behind the brand.",
+    "intro": "KORTEX DIGITAL is an Ivorian technology company. It carries the KORTEX brand and develops its universes: design, artificial intelligence, training, and many more to come.",
+    "visionTitle": "Vision",
+    "visionStatement": "Building an African technology brand able to grow across several universes.",
+    "visionText": "KORTEX starts from technology know-how and aims to turn it, step by step, into a platform for creating products, services and experiences. Each universe has its own market and offer, while drawing on the ecosystem’s technology and creative capabilities.",
+    "companyTitle": "KORTEX DIGITAL",
+    "companyStatement": "One brand, one company.",
+    "companyText": "KORTEX is the brand; KORTEX DIGITAL is the company behind it, based in Abidjan, with ambitions beyond the Ivorian market.",
+    "valuesTitle": "What guides us",
+    "values": {
+      "clarity": {
+        "title": "Clarity",
+        "text": "Solutions that are easy to understand, use and evolve."
+      },
+      "rigor": {
+        "title": "Rigour",
+        "text": "Careful work, justified choices, commitments kept."
+      },
+      "transmission": {
+        "title": "Transmission",
+        "text": "We share what we know to make people autonomous."
+      },
+      "impact": {
+        "title": "Impact",
+        "text": "Every project must solve a real problem."
+      }
+    },
+    "originTitle": "Why KORTEX",
+    "originText": "The cortex is the part of the brain that processes information and makes decisions. That is our role: turning ideas into products, services and experiences that work."
+  },
+  "insights": {
+    "meta": {
+      "title": "Insights",
+      "description": "Articles and analysis from KORTEX on technology, AI, design and creation."
+    },
+    "eyebrow": "Insights",
+    "title": "Notes on technology, creation and the KORTEX universes.",
+    "emptyTitle": "First articles in preparation.",
+    "emptyText": "We will publish our analysis and lessons learned here. Check back soon.",
+    "draft": "Draft — visible in development only",
+    "backToInsights": "All articles",
+    "readingTime": "{minutes} min read"
+  },
+  "careers": {
+    "meta": {
+      "title": "Careers",
+      "description": "Join KORTEX DIGITAL in Abidjan: design, artificial intelligence, development and training."
+    },
+    "eyebrow": "Careers",
+    "title": "Let’s build together.",
+    "text": "KORTEX is just starting. We are looking for demanding, curious people who want to build a brand and its universes.",
+    "lookingTitle": "What we look for",
+    "looking": {
+      "craft": "Pride in good work",
+      "curiosity": "Curiosity for new technologies",
+      "ownership": "A sense of ownership",
+      "sharing": "A desire to share knowledge"
+    },
+    "openingsTitle": "Open positions",
+    "noOpenings": "No open positions at the moment.",
+    "spontaneous": "Open application",
+    "spontaneousText": "Send us your profile and a few words about what you would like to build."
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact",
+      "description": "Tell us about your project: design, artificial intelligence, website, app or training. KORTEX DIGITAL, Abidjan."
+    },
+    "eyebrow": "Contact",
+    "title": "Let’s start your project.",
+    "text": "A few details help us prepare a useful first conversation. You can also call us or message us on WhatsApp.",
+    "directTitle": "Direct contact",
+    "fields": {
+      "name": "Full name",
+      "company": "Company",
+      "email": "Work email",
+      "phone": "Phone",
+      "need": "Type of need",
+      "message": "Describe your project",
+      "messagePlaceholder": "Context, goals, constraints…",
+      "budget": "Indicative budget",
+      "timeline": "Desired timeline",
+      "consent": "I agree that KORTEX Digital may use this information to contact me, in accordance with the <link>privacy policy</link>.",
+      "optional": "optional",
+      "select": "Select"
+    },
+    "needs": {
+      "design": "KORTEX DESIGN",
+      "ai": "KORTEX AI",
+      "training": "KORTEX TRAINING",
+      "other": "Other"
+    },
+    "submit": "Send request",
+    "sending": "Sending…",
+    "successTitle": "Thank you, your request has been sent.",
+    "successText": "You will receive a confirmation email. We’ll be in touch shortly.",
+    "error": "Sending failed. Please try again or email us directly at {email}.",
+    "rateLimited": "Too many attempts. Please try again in a few minutes.",
+    "errors": {
+      "name": "Please enter your name.",
+      "email": "Please enter a valid email.",
+      "phone": "Invalid phone number.",
+      "need": "Please choose a type of need.",
+      "message": "Describe your project in a few sentences (20 characters minimum).",
+      "budget": "Please choose a budget range.",
+      "timeline": "Please choose a timeline.",
+      "consent": "We need your consent to contact you.",
+      "tooLong": "Text is too long."
+    }
+  },
+  "email": {
+    "teamSubject": "New request — {name} ({need})",
+    "ackSubject": "We have received your request",
+    "ackGreeting": "Hello {name},",
+    "ackBody": "Thank you for your message. Our team is reviewing it and will get back to you within 2 business days.",
+    "ackSignature": "The KORTEX team"
+  },
+  "legal": {
+    "meta": {
+      "title": "Legal notice",
+      "description": "Legal notice for the KORTEX website — KORTEX DIGITAL."
+    },
+    "title": "Legal notice",
+    "notice": "The RCCM registration number will be added once received.",
+    "sections": {
+      "publisher": {
+        "title": "Website publisher",
+        "body": "Company: KORTEX DIGITAL (KORTEX brand)\nLegal form: single-member limited company (SARL-U)\nRegistered office: Cocody, Angré Extension Château – Latrille-Bessikoi, Abidjan, Côte d’Ivoire\nRegistration (RCCM): in progress\nPhone: +225 07 12 11 62 58\nEmail: {email}"
+      },
+      "director": {
+        "title": "Publication director",
+        "body": "Shalom Tehe, founder and managing director"
+      },
+      "host": {
+        "title": "Hosting",
+        "body": "Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, United States — vercel.com"
+      },
+      "ip": {
+        "title": "Intellectual property",
+        "body": "All content on this site (text, visuals, the “K” logo, code) is the property of KORTEX DIGITAL unless stated otherwise. Temporary photographs come from Unsplash and remain the property of their authors."
+      }
+    }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Privacy policy",
+      "description": "How KORTEX DIGITAL collects and uses your personal data."
+    },
+    "title": "Privacy policy",
+    "notice": "The retention period is still to be confirmed by KORTEX DIGITAL.",
+    "sections": {
+      "controller": {
+        "title": "Data controller",
+        "body": "KORTEX DIGITAL, Cocody, Angré Extension Château – Latrille-Bessikoi, Abidjan, Côte d’Ivoire — {email}"
+      },
+      "data": {
+        "title": "Data collected",
+        "body": "Through the contact form: name, company, email, phone, type of need, project description, indicative budget and desired timeline."
+      },
+      "purpose": {
+        "title": "Purpose",
+        "body": "This data is used only to respond to your request and for business follow-up. It is never sold or transferred to third parties."
+      },
+      "retention": {
+        "title": "Retention period",
+        "body": "[Period to be completed — for example 3 years after the last contact.]"
+      },
+      "processors": {
+        "title": "Processors",
+        "body": "Hosting: Vercel. Email delivery: Resend."
+      },
+      "rights": {
+        "title": "Your rights",
+        "body": "Under Ivorian law no. 2013-450 on the protection of personal data, you have the right to access, rectify, object to and delete your data. Write to us at {email}."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "body": "This site only uses a technical cookie that remembers your language. No advertising or analytics cookies are set."
+      }
+    }
+  },
+  "notFound": {
+    "title": "Page not found.",
+    "text": "The page you are looking for does not exist or has moved."
+  }
+}
