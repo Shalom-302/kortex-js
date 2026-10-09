@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { ButtonLink } from "@/components/ui/button";
 import { KMark } from "@/components/brand/k-mark";
-import { PHONE_URL, SITE, WHATSAPP_URL } from "@/lib/constants";
+import { PHONE_URL, SITE, whatsappUrl } from "@/lib/constants";
 import { Reveal } from "./reveal";
 import { SplitText } from "./split-text";
 import { brand } from "@/components/brand/brand-name";
@@ -30,7 +30,7 @@ export async function CtaBand() {
           <a href={PHONE_URL} className={`${linkClass} block`}>
             {SITE.phone.display}
           </a>
-          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className={`${linkClass} block text-grey-500`}>
+          <a href={whatsappUrl(t("whatsappMessage"))} target="_blank" rel="noopener noreferrer" className={`${linkClass} block text-grey-500`}>
             {t("whatsapp")}
           </a>
         </>

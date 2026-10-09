@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
-import { PHONE_URL, SITE, WHATSAPP_URL } from "@/lib/constants";
+import { PHONE_URL, SITE, whatsappUrl } from "@/lib/constants";
+import { ButtonAnchor } from "@/components/ui/button";
 import { staticPageMetadata } from "@/lib/seo";
 import { ContactForm } from "@/components/contact/contact-form";
 import { PageHeader } from "@/components/shared/page-header";
@@ -34,6 +35,20 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/conta
             <p className="mt-6 text-lg font-medium tracking-tight">{SITE.founder}</p>
             <p className="text-sm text-grey-400">{brand(tb("role"))}</p>
 
+            <div className="mt-8 border-t border-grey-800 pt-6">
+              <p className="text-sm text-grey-400">{t("whatsappTitle")}</p>
+              <ButtonAnchor
+                href={whatsappUrl(t("whatsappMessage"))}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="inverted"
+                arrow
+                className="mt-4 w-full"
+              >
+                {t("whatsappCta")}
+              </ButtonAnchor>
+            </div>
+
             <dl className="mt-8 flex flex-col gap-5 border-t border-grey-800 pt-6">
               <div>
                 <dt className="eyebrow text-grey-500">{tb("phone")}</dt>
@@ -43,7 +58,7 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/conta
                   </a>
                 </dd>
                 <dd className="mt-1 text-sm text-grey-400">
-                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className={linkClass}>
+                  <a href={whatsappUrl(t("whatsappMessage"))} target="_blank" rel="noopener noreferrer" className={linkClass}>
                     {tb("whatsapp")}
                   </a>
                 </dd>

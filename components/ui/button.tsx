@@ -33,6 +33,23 @@ export function buttonClasses({
   return cn(base, variants[variant], sizes[size], className);
 }
 
+/** Same look as ButtonLink, for links leaving the site (WhatsApp, mailto…). */
+export function ButtonAnchor({
+  variant,
+  size,
+  arrow,
+  className,
+  children,
+  ...props
+}: StyleProps & ComponentProps<"a">) {
+  return (
+    <a className={buttonClasses({ variant, size, className })} {...props}>
+      {children}
+      {arrow && <Arrow />}
+    </a>
+  );
+}
+
 function Arrow() {
   return (
     <ArrowUpRight

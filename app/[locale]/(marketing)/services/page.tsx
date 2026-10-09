@@ -2,8 +2,9 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
 import { SERVICE_GROUPS } from "@/data/services";
 import { getUniverse } from "@/data/universes";
+import { whatsappUrl } from "@/lib/constants";
 import { staticPageMetadata } from "@/lib/seo";
-import { ButtonLink } from "@/components/ui/button";
+import { ButtonAnchor, ButtonLink } from "@/components/ui/button";
 import { CtaBand } from "@/components/shared/cta-band";
 import { PageHeader } from "@/components/shared/page-header";
 import { Reveal } from "@/components/shared/reveal";
@@ -47,9 +48,20 @@ export default async function ServicesPage({ params }: PageProps<"/[locale]/serv
                 </div>
                 <div className="md:col-span-7 md:col-start-6">
                   <OfferList offers={group.offers} locale={locale} details />
-                  <ButtonLink href="/contact" variant="secondary" arrow className="mt-8">
-                    {tc("requestQuote")}
-                  </ButtonLink>
+                  <div className="mt-8 flex flex-wrap gap-3">
+                    <ButtonLink href="/contact" variant="secondary" arrow>
+                      {tc("requestQuote")}
+                    </ButtonLink>
+                    <ButtonAnchor
+                      href={whatsappUrl(t("whatsappMessage", { universe: universe.name }))}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      variant="secondary"
+                      arrow
+                    >
+                      {t("whatsappQuote")}
+                    </ButtonAnchor>
+                  </div>
                 </div>
               </Reveal>
             );

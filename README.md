@@ -79,8 +79,12 @@ correspondante (ex. `src: "/images/equipe.jpg"`). Aucun composant à modifier.
 
 ## Formulaire de contact
 
-Variables (voir `.env.example`) : `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL`
-(domaine vérifié dans Resend). Sans elles, en développement, les demandes sont affichées dans la console.
+Seule `RESEND_API_KEY` est obligatoire (voir `.env.example`). Par défaut, les demandes arrivent sur
+le Gmail du fondateur (`SITE.email`) via l'expéditeur de test de Resend : le compte Resend doit donc être
+créé avec cette adresse, et l'email de confirmation au visiteur n'est pas envoyé. Avec le mail pro :
+vérifier `kortex.digital` dans Resend, puis définir `CONTACT_TO_EMAIL` et `CONTACT_FROM_EMAIL`.
+Sans clé, en développement, les demandes sont affichées dans la console.
+Chaque demande peut aussi continuer sur WhatsApp (message pré-rempli, `whatsappUrl()` dans `lib/constants.ts`).
 
 Protections : validation Zod partagée client/serveur, honeypot, limite de 5 envois / 10 min par IP.
 

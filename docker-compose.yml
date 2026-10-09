@@ -5,8 +5,9 @@ services:
     environment:
       NODE_ENV: production
       RESEND_API_KEY: ${RESEND_API_KEY}
-      CONTACT_TO_EMAIL: ${CONTACT_TO_EMAIL:-contact@kortex.digital}
-      CONTACT_FROM_EMAIL: ${CONTACT_FROM_EMAIL:-KORTEX Digital <noreply@kortex.digital>}
+      # Empty = defaults in app/api/contact/route.ts (founder's Gmail, Resend test sender).
+      CONTACT_TO_EMAIL: ${CONTACT_TO_EMAIL:-}
+      CONTACT_FROM_EMAIL: ${CONTACT_FROM_EMAIL:-}
     expose:
       - "3000"
     networks:

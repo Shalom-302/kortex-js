@@ -175,7 +175,9 @@
     "title": "Clear offers, every project tailored.",
     "text": "The services of KORTEX’s three operational universes. Each project is quoted on request, according to its scope.",
     "seeDetails": "See details",
-    "quoteNote": "All our services are quoted on request. Each project is scoped, then priced according to your goals, its complexity, deliverables and timeline."
+    "quoteNote": "All our services are quoted on request. Each project is scoped, then priced according to your goals, its complexity, deliverables and timeline.",
+    "whatsappQuote": "Quote on WhatsApp",
+    "whatsappMessage": "Hello KORTEX, I would like a quote for KORTEX {universe}."
   },
   "companyFacts": {
     "company": "Company",
@@ -193,7 +195,8 @@
     "phone": "Phone / WhatsApp",
     "whatsapp": "Message on WhatsApp",
     "email": "Email",
-    "location": "Location"
+    "location": "Location",
+    "whatsappMessage": "Hello KORTEX, I have a project I’d like to talk to you about."
   },
   "about": {
     "meta": {
@@ -313,7 +316,7 @@
     "submit": "Send request",
     "sending": "Sending…",
     "successTitle": "Thank you, your request has been sent.",
-    "successText": "You will receive a confirmation email. We’ll be in touch shortly.",
+    "successText": "We’ll be in touch shortly. To move faster, you can also continue the conversation on WhatsApp.",
     "error": "Sending failed. Please try again or email us directly at {email}.",
     "rateLimited": "Too many attempts. Please try again in a few minutes.",
     "errors": {
@@ -326,7 +329,12 @@
       "timeline": "Please choose a timeline.",
       "consent": "We need your consent to contact you.",
       "tooLong": "Text is too long."
-    }
+    },
+    "whatsappTitle": "Prefer WhatsApp?",
+    "whatsappCta": "Request a quote on WhatsApp",
+    "whatsappMessage": "Hello KORTEX, I would like a quote for a project.",
+    "successWhatsapp": "Continue on WhatsApp",
+    "whatsappSummary": "Hello KORTEX, I just sent a quote request from the website.\n\nName: {name}\nNeed: {need}\nBudget: {budget}\nTimeline: {timeline}\n\n{message}"
   },
   "email": {
     "teamSubject": "New request — {name} ({need})",

@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getTranslations } from "next-intl/server";
 import { Resend } from "resend";
-import { BUDGET_RANGES, TIMELINES } from "@/lib/constants";
+import { BUDGET_RANGES, SITE, TIMELINES } from "@/lib/constants";
 import { rateLimit } from "@/lib/rate-limit";
 import { contactSchema, type ContactInput } from "@/lib/validations/contact";
 
@@ -30,15 +30,18 @@ export async function POST(request: Request) {
   const data = parsed.data;
 
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO_EMAIL;
-  const from = process.env.CONTACT_FROM_EMAIL;
+  // Until a professional mailbox and a verified domain exist, requests go to the founder's
+  // address and are sent from Resend's test sender (which can only deliver to the account owner).
+  const to = process.env.CONTACT_TO_EMAIL || SITE.email;
+  const from = process.env.CONTACT_FROM_EMAIL || "KORTEX <onboarding@resend.dev>";
+  const testSender = from.includes("@resend.dev");
 
-  if (!apiKey || !to || !from) {
+  if (!apiKey) {
     if (process.env.NODE_ENV !== "production") {
       console.info("[contact] Email not configured — request received:", data);
       return NextResponse.json({ ok: true, dev: true });
     }
-    console.error("[contact] Missing RESEND_API_KEY, CONTACT_TO_EMAIL or CONTACT_FROM_EMAIL");
+    console.error("[contact] Missing RESEND_API_KEY");
     return NextResponse.json({ ok: false, error: "not_configured" }, { status: 500 });
   }
 
@@ -58,6 +61,9 @@ export async function POST(request: Request) {
     console.error("[contact] Team email failed:", team.error);
     return NextResponse.json({ ok: false, error: "send_failed" }, { status: 502 });
   }
+
+  // Resend's test sender cannot email visitors: skip the acknowledgement until the domain is verified.
+  if (testSender) return NextResponse.json({ ok: true });
 
   // The acknowledgement is best effort: the request is already delivered to the team.
   const ack = await resend.emails.send({

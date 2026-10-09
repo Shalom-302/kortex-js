@@ -175,7 +175,9 @@
     "title": "Des offres claires, chaque projet sur mesure.",
     "text": "Les services des trois univers opérationnels de KORTEX. Chaque projet est chiffré sur devis, selon son périmètre.",
     "seeDetails": "Voir le détail",
-    "quoteNote": "Toutes nos prestations sont sur devis. Chaque projet est cadré puis chiffré selon vos objectifs, sa complexité, ses livrables et ses délais."
+    "quoteNote": "Toutes nos prestations sont sur devis. Chaque projet est cadré puis chiffré selon vos objectifs, sa complexité, ses livrables et ses délais.",
+    "whatsappQuote": "Devis sur WhatsApp",
+    "whatsappMessage": "Bonjour KORTEX, je souhaite un devis pour KORTEX {universe}."
   },
   "companyFacts": {
     "company": "Entreprise",
@@ -193,7 +195,8 @@
     "phone": "Téléphone / WhatsApp",
     "whatsapp": "Écrire sur WhatsApp",
     "email": "Email",
-    "location": "Localisation"
+    "location": "Localisation",
+    "whatsappMessage": "Bonjour KORTEX, j’ai un projet dont j’aimerais vous parler."
   },
   "about": {
     "meta": {
@@ -313,7 +316,7 @@
     "submit": "Envoyer la demande",
     "sending": "Envoi…",
     "successTitle": "Merci, votre demande est bien envoyée.",
-    "successText": "Vous allez recevoir un email de confirmation. Nous revenons vers vous rapidement.",
+    "successText": "Nous revenons vers vous rapidement. Pour aller plus vite, vous pouvez aussi continuer l’échange sur WhatsApp.",
     "error": "L’envoi a échoué. Réessayez ou écrivez-nous directement à {email}.",
     "rateLimited": "Trop de tentatives. Merci de réessayer dans quelques minutes.",
     "errors": {
@@ -326,7 +329,12 @@
       "timeline": "Choisissez un délai.",
       "consent": "Votre accord est nécessaire pour vous recontacter.",
       "tooLong": "Texte trop long."
-    }
+    },
+    "whatsappTitle": "Vous préférez WhatsApp ?",
+    "whatsappCta": "Demander un devis sur WhatsApp",
+    "whatsappMessage": "Bonjour KORTEX, je souhaite obtenir un devis pour un projet.",
+    "successWhatsapp": "Continuer sur WhatsApp",
+    "whatsappSummary": "Bonjour KORTEX, je viens d’envoyer une demande de devis depuis le site.\n\nNom : {name}\nBesoin : {need}\nBudget : {budget}\nDélai : {timeline}\n\n{message}"
   },
   "email": {
     "teamSubject": "Nouvelle demande — {name} ({need})",

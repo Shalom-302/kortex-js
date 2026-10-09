@@ -8,10 +8,10 @@ import { Check } from "lucide-react";
 import type { z } from "zod";
 import type messages from "@/messages/fr.json";
 import { Link } from "@/i18n/navigation";
-import { BUDGET_RANGES, NEED_TYPES, SITE, TIMELINES } from "@/lib/constants";
+import { BUDGET_RANGES, NEED_TYPES, SITE, TIMELINES, whatsappUrl } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { contactSchema } from "@/lib/validations/contact";
-import { Button } from "@/components/ui/button";
+import { Button, ButtonAnchor } from "@/components/ui/button";
 import { brand, brandChildren } from "@/components/brand/brand-name";
 
 type FormInput = z.input<typeof contactSchema>;
@@ -28,6 +28,7 @@ export function ContactForm() {
   const t = useTranslations("contact");
   const locale = useLocale();
   const [status, setStatus] = useState<Status>("idle");
+  const [sent, setSent] = useState<FormOutput | null>(null);
 
   const {
     register,
@@ -48,6 +49,17 @@ export function ContactForm() {
     mode: "onTouched",
   });
 
+  const lang = locale === "en" ? "en" : "fr";
+  // The request as a WhatsApp message, so the conversation can continue there.
+  const whatsappSummary = (v: FormOutput) =>
+    t("whatsappSummary", {
+      name: v.name,
+      need: t(`needs.${v.need}`),
+      budget: BUDGET_RANGES.find((b) => b.value === v.budget)?.label[lang] ?? v.budget,
+      timeline: TIMELINES.find((tl) => tl.value === v.timeline)?.label[lang] ?? v.timeline,
+      message: v.message.length > 600 ? `${v.message.slice(0, 600)}…` : v.message,
+    });
+
   const errorText = (error?: FieldError) =>
     error?.message ? t(`errors.${error.message as ErrorKey}`) : undefined;
 
@@ -61,6 +73,7 @@ export function ContactForm() {
       });
       if (res.status === 429) return setStatus("rate-limited");
       if (!res.ok) return setStatus("error");
+      setSent(values);
       setStatus("success");
       reset();
     } catch {
@@ -76,6 +89,18 @@ export function ContactForm() {
         </span>
         <h2 className="mt-8 text-title font-medium">{t("successTitle")}</h2>
         <p className="mt-3 text-grey-400">{t("successText")}</p>
+        {sent && (
+          <ButtonAnchor
+            href={whatsappUrl(whatsappSummary(sent))}
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="inverted"
+            arrow
+            className="mt-8"
+          >
+            {t("successWhatsapp")}
+          </ButtonAnchor>
+        )}
       </div>
     );
   }

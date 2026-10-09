@@ -37,7 +37,8 @@ export function brand(text: string): ReactNode {
     if (parts[i]) out.push(parts[i]);
     if (i + 2 < parts.length) out.push(<BrandName key={i} rest={parts[i + 2]} />);
   }
-  return out;
+  // One inline box, so flex parents (chips, buttons) keep the spaces around the name.
+  return <span>{out}</span>;
 }
 
 /** brand() applied to the string children of a React tree (used for MDX and rich text). */
