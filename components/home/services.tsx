@@ -7,6 +7,7 @@ import { Reveal } from "@/components/shared/reveal";
 import { Section } from "@/components/shared/section";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { OfferList } from "@/components/services/offer-list";
+import { BrandName } from "@/components/brand/brand-name";
 
 export async function Services() {
   const t = await getTranslations("home.services");
@@ -27,7 +28,9 @@ export async function Services() {
               delay={i * 0.08}
               className="flex flex-col rounded-card border border-grey-200 bg-paper p-7 transition-colors duration-500 hover:border-grey-400 md:p-8"
             >
-              <p className="eyebrow text-grey-400">KORTEX</p>
+              <p className="eyebrow text-grey-400">
+                <BrandName />
+              </p>
               <h3 className="mt-1 text-title font-semibold tracking-[-0.02em]">{universe.name}</h3>
               <p className="mt-3 text-sm leading-relaxed text-grey-500">{universe.summary[locale]}</p>
               <OfferList offers={group.offers.filter((o) => o.featured)} locale={locale} className="mt-8" />

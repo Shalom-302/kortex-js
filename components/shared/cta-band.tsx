@@ -4,6 +4,7 @@ import { KMark } from "@/components/brand/k-mark";
 import { PHONE_URL, SITE, WHATSAPP_URL } from "@/lib/constants";
 import { Reveal } from "./reveal";
 import { SplitText } from "./split-text";
+import { brand } from "@/components/brand/brand-name";
 
 const linkClass = "underline-offset-4 decoration-grey-600 transition-colors hover:underline hover:decoration-paper";
 
@@ -18,7 +19,7 @@ export async function CtaBand() {
       content: (
         <>
           <span className="block">{SITE.founder}</span>
-          <span className="block text-grey-500">{t("role")}</span>
+          <span className="block text-grey-500">{brand(t("role"))}</span>
         </>
       ),
     },

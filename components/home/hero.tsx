@@ -5,6 +5,7 @@ import { SplitText } from "@/components/shared/split-text";
 import { HeroParallax } from "./hero-parallax";
 import { HeroWordmark } from "./hero-wordmark";
 import { HeroScene } from "./hero-scene";
+import { BrandName, brand } from "@/components/brand/brand-name";
 
 export async function Hero() {
   const t = await getTranslations("home.hero");
@@ -24,7 +25,7 @@ export async function Hero() {
         <div className="flex flex-1 flex-col justify-center">
           <Reveal>
             <p className="eyebrow text-grey-500">
-              KORTEX DIGITAL <span className="mx-2 text-grey-700">/</span> {t("eyebrow")}
+              <BrandName /> DIGITAL <span className="mx-2 text-grey-700">/</span> {t("eyebrow")}
             </p>
           </Reveal>
           <h1 className="mt-8">
@@ -38,12 +39,12 @@ export async function Hero() {
           </h1>
           <Reveal delay={0.7}>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-pretty text-grey-400 md:text-xl">
-              {t("subtitle")}
+              {brand(t("subtitle"))}
             </p>
           </Reveal>
           <Reveal delay={0.85} className="mt-12 flex flex-wrap items-center gap-3">
             <ButtonLink href="/universes" size="lg" variant="inverted" arrow>
-              {t("primary")}
+              {brand(t("primary"))}
             </ButtonLink>
             <ButtonLink href="/contact" size="lg" variant="outline-inverted">
               {tc("contactUs")}

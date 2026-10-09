@@ -8,6 +8,7 @@ import { CtaBand } from "@/components/shared/cta-band";
 import { PageHeader } from "@/components/shared/page-header";
 import { Reveal } from "@/components/shared/reveal";
 import { OfferList } from "@/components/services/offer-list";
+import { BrandName } from "@/components/brand/brand-name";
 
 export function generateMetadata({ params }: PageProps<"/[locale]/services">) {
   return staticPageMetadata(params, "services");
@@ -36,7 +37,9 @@ export default async function ServicesPage({ params }: PageProps<"/[locale]/serv
                 <span id={group.universe} className="absolute -top-24" aria-hidden />
                 <div className="md:col-span-4">
                   <span className="font-mono text-xs text-grey-400">{String(i + 1).padStart(2, "0")}</span>
-                  <p className="eyebrow mt-8 text-grey-400">KORTEX</p>
+                  <p className="eyebrow mt-8 text-grey-400">
+                    <BrandName />
+                  </p>
                   <h2 className="mt-2 text-[clamp(2.25rem,4.5vw,3.75rem)] leading-none font-semibold tracking-[-0.04em]">
                     {universe.name}
                   </h2>

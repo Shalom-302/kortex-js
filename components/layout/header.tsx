@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import { LocaleSwitcher } from "./locale-switcher";
 import { Logo } from "./logo";
 import { NAV_ITEMS } from "./nav-items";
+import { BrandName, brand } from "@/components/brand/brand-name";
 
 // Pages whose first screen is black: the header starts inverted there.
 const DARK_TOP = new Set(["/"]);
@@ -149,12 +150,12 @@ export function Header() {
               </ul>
 
               <div className="mt-12 border-t border-grey-800 pt-6">
-                <p className="eyebrow text-grey-500">{t("universesMenu")}</p>
+                <p className="eyebrow text-grey-500">{brand(t("universesMenu"))}</p>
                 <ul className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm text-grey-400">
                   {CORE_UNIVERSES.map((u) => (
                     <li key={u.slug}>
                       <Link href={`/universes#${u.slug}`} className="hover:text-paper">
-                        KORTEX {u.name}
+                        <BrandName /> {u.name}
                       </Link>
                     </li>
                   ))}

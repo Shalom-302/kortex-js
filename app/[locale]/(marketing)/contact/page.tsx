@@ -5,6 +5,7 @@ import { staticPageMetadata } from "@/lib/seo";
 import { ContactForm } from "@/components/contact/contact-form";
 import { PageHeader } from "@/components/shared/page-header";
 import { Reveal } from "@/components/shared/reveal";
+import { brand } from "@/components/brand/brand-name";
 
 const linkClass = "underline-offset-4 hover:underline";
 
@@ -31,7 +32,7 @@ export default async function ContactPage({ params }: PageProps<"/[locale]/conta
           <aside className="rounded-card bg-ink p-8 text-paper md:sticky md:top-28">
             <h2 className="eyebrow text-grey-500">{t("directTitle")}</h2>
             <p className="mt-6 text-lg font-medium tracking-tight">{SITE.founder}</p>
-            <p className="text-sm text-grey-400">{tb("role")}</p>
+            <p className="text-sm text-grey-400">{brand(tb("role"))}</p>
 
             <dl className="mt-8 flex flex-col gap-5 border-t border-grey-800 pt-6">
               <div>

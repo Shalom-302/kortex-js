@@ -12,6 +12,7 @@ import { BUDGET_RANGES, NEED_TYPES, SITE, TIMELINES } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { contactSchema } from "@/lib/validations/contact";
 import { Button } from "@/components/ui/button";
+import { brand, brandChildren } from "@/components/brand/brand-name";
 
 type FormInput = z.input<typeof contactSchema>;
 type FormOutput = z.output<typeof contactSchema>;
@@ -120,7 +121,7 @@ export function ContactForm() {
             <label key={need} className="cursor-pointer">
               <input type="radio" value={need} className="peer sr-only" {...register("need")} />
               <span className="inline-flex h-10 items-center rounded-full border border-grey-300 px-4 text-sm transition-colors duration-200 peer-checked:border-ink peer-checked:bg-ink peer-checked:text-paper peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-ink hover:border-ink">
-                {t(`needs.${need}`)}
+                {brand(t(`needs.${need}`))}
               </span>
             </label>
           ))}
@@ -183,13 +184,13 @@ export function ContactForm() {
             {...register("consent")}
           />
           <span>
-            {t.rich("fields.consent", {
+            {brandChildren(t.rich("fields.consent", {
               link: (chunks) => (
                 <Link href="/privacy" className="text-ink underline underline-offset-4" target="_blank">
                   {chunks}
                 </Link>
               ),
-            })}
+            }))}
           </span>
         </label>
         {errors.consent && <ErrorText id="consent-error">{errorText(errors.consent)}</ErrorText>}

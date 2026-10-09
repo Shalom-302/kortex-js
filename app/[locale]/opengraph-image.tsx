@@ -1,6 +1,7 @@
 import { ImageResponse } from "next/og";
 import { getTranslations } from "next-intl/server";
 import { routing, type Locale } from "@/i18n/routing";
+import { K_TIGHT_VIEWBOX } from "@/components/brand/k-geometry";
 import { K_PATH } from "@/components/brand/k-mark";
 import { WORDMARK_PATH, WORDMARK_VIEWBOX } from "@/components/brand/wordmark";
 
@@ -42,8 +43,11 @@ export default async function OpengraphImage({ params }: { params: Promise<{ loc
         >
           <path d={K_PATH} fill="#262626" />
         </svg>
-        <div style={{ display: "flex", alignItems: "center", gap: 16, fontSize: 26, fontWeight: 600, letterSpacing: 4 }}>
-          KORTEX DIGITAL
+        <div style={{ display: "flex", alignItems: "center", fontSize: 26, fontWeight: 600, letterSpacing: 4 }}>
+          <svg width="22" height="28" viewBox={K_TIGHT_VIEWBOX} style={{ marginRight: 4 }}>
+            <path d={K_PATH} fill="#fff" />
+          </svg>
+          ORTEX DIGITAL
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <svg width="560" height="180" viewBox={WORDMARK_VIEWBOX}>

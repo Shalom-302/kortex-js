@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "motion/react";
+import { brand } from "@/components/brand/brand-name";
 
 type SplitTextProps = {
   text: string;
@@ -16,7 +17,7 @@ type SplitTextProps = {
  */
 export function SplitText({ text, className, delay = 0, immediate = false }: SplitTextProps) {
   const reduce = useReducedMotion();
-  if (reduce) return <span className={className}>{text}</span>;
+  if (reduce) return <span className={className}>{brand(text)}</span>;
 
   const words = text.split(" ");
   const trigger = immediate
@@ -33,7 +34,7 @@ export function SplitText({ text, className, delay = 0, immediate = false }: Spl
             variants={{ hidden: { y: "105%" }, shown: { y: 0 } }}
             transition={{ duration: 0.9, delay: delay + i * 0.06, ease: [0.22, 1, 0.36, 1] }}
           >
-            {word}
+            {brand(word)}
             {i < words.length - 1 && " "}
           </motion.span>
         </span>

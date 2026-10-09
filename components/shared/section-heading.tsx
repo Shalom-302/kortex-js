@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { Reveal } from "./reveal";
 import { SplitText } from "./split-text";
+import { brand, brandChildren } from "@/components/brand/brand-name";
 
 type SectionHeadingProps = {
   eyebrow: string;
@@ -27,7 +28,7 @@ export function SectionHeading({
   return (
     <Reveal className={cn("grid gap-8 md:grid-cols-12", className)}>
       <p className={cn("eyebrow md:col-span-3 md:pt-3", dark ? "text-grey-400" : "text-grey-500")}>
-        {eyebrow}
+        {brand(eyebrow)}
       </p>
       <div className="md:col-span-9">
         <Heading
@@ -45,7 +46,7 @@ export function SectionHeading({
               dark ? "text-grey-400" : "text-grey-600",
             )}
           >
-            {text}
+            {brandChildren(text)}
           </p>
         )}
         {children}

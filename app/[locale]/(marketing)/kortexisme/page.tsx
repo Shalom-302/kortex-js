@@ -10,6 +10,7 @@ import { mdxComponents } from "@/components/shared/mdx-components";
 import { PageHeader } from "@/components/shared/page-header";
 import { Reveal } from "@/components/shared/reveal";
 import { Section } from "@/components/shared/section";
+import { BrandName } from "@/components/brand/brand-name";
 
 const MAXIMS = ["humility", "discernment", "responsibility"] as const;
 
@@ -47,7 +48,9 @@ export default async function KortexismePage({ params }: PageProps<"/[locale]/ko
       <article className="container-page py-24 md:py-36">
         <div className="mx-auto max-w-3xl [&>h2:first-child]:mt-0">
           <MDXRemote source={source} components={{ ...mdxComponents, Principles, Principle }} />
-          <p className="eyebrow mt-16 border-t border-grey-200 pt-8 text-grey-500">KORTEX · Overcome Standard Limits.</p>
+          <p className="eyebrow mt-16 border-t border-grey-200 pt-8 text-grey-500">
+            <BrandName /> · Overcome Standard Limits.
+          </p>
         </div>
       </article>
 

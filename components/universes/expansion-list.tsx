@@ -3,6 +3,7 @@ import type { Locale } from "@/i18n/routing";
 import { EXPANSION_UNIVERSES, UNIVERSE_FAMILIES } from "@/data/universes";
 import { Reveal } from "@/components/shared/reveal";
 import { StatusBadge } from "./status-badge";
+import { BrandName } from "@/components/brand/brand-name";
 
 /**
  * Universes in development, grouped by family. Deliberately quieter than the core cards:
@@ -24,7 +25,9 @@ export async function ExpansionList({ locale }: { locale: Locale }) {
                 className="group grid scroll-mt-28 gap-1 border-b border-grey-200 py-4 sm:grid-cols-[11rem_1fr_auto] sm:items-baseline sm:gap-6"
               >
                 <p className="text-sm font-medium tracking-[0.06em] text-grey-700">
-                  <span className="text-grey-400">KORTEX </span>
+                  <span className="text-grey-400">
+                    <BrandName />{" "}
+                  </span>
                   {u.name}
                 </p>
                 <p className="text-sm text-grey-500">{u.summary[locale]}</p>

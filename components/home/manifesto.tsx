@@ -3,6 +3,7 @@ import { KMark } from "@/components/brand/k-mark";
 import { Reveal } from "@/components/shared/reveal";
 import { Section } from "@/components/shared/section";
 import { SplitText } from "@/components/shared/split-text";
+import { brand } from "@/components/brand/brand-name";
 
 const CREATES = ["products", "services", "experiences", "communities"] as const;
 
@@ -27,7 +28,7 @@ export async function Manifesto() {
           </Reveal>
           <Reveal delay={0.08}>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-pretty text-grey-600 md:text-xl">
-              {t("text")}
+              {brand(t("text"))}
             </p>
           </Reveal>
         </div>

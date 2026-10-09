@@ -10,6 +10,7 @@ import { PageHeader } from "@/components/shared/page-header";
 import { Reveal } from "@/components/shared/reveal";
 import { Section } from "@/components/shared/section";
 import { SectionHeading } from "@/components/shared/section-heading";
+import { brand } from "@/components/brand/brand-name";
 
 const VALUES = ["clarity", "rigor", "transmission", "impact"] as const;
 
@@ -62,9 +63,9 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
       <Section tone="muted">
         <div className="grid gap-14 md:grid-cols-12">
           <Reveal className="md:col-span-5">
-            <p className="eyebrow text-grey-500">{t("companyTitle")}</p>
+            <p className="eyebrow text-grey-500">{brand(t("companyTitle"))}</p>
             <h2 className="mt-6 text-headline font-medium text-balance">{t("companyStatement")}</h2>
-            <p className="mt-6 max-w-md leading-relaxed text-grey-600">{t("companyText")}</p>
+            <p className="mt-6 max-w-md leading-relaxed text-grey-600">{brand(t("companyText"))}</p>
           </Reveal>
           <Reveal delay={0.1} className="md:col-span-6 md:col-start-7 md:pt-3">
             <CompanyFacts />
@@ -78,7 +79,7 @@ export default async function AboutPage({ params }: PageProps<"/[locale]/about">
             <KMark className="size-32 md:size-48" />
           </Reveal>
           <Reveal delay={0.08} className="md:col-span-7 md:col-start-6">
-            <p className="eyebrow text-grey-500">{t("originTitle")}</p>
+            <p className="eyebrow text-grey-500">{brand(t("originTitle"))}</p>
             <p className="mt-6 text-title leading-snug font-medium text-pretty">{t("originText")}</p>
             <ButtonLink href="/kortexisme" variant="secondary" arrow className="mt-10">
               {tk("aboutLink")}

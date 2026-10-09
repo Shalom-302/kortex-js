@@ -4,6 +4,7 @@ import type { Locale } from "@/i18n/routing";
 import type { Universe } from "@/data/universes";
 import { KMark } from "@/components/brand/k-mark";
 import { StatusBadge } from "./status-badge";
+import { BrandName } from "@/components/brand/brand-name";
 
 type CoreUniverseCardProps = {
   universe: Universe;
@@ -31,7 +32,9 @@ export function CoreUniverseCard({ universe, index, locale, href, statusLabel, l
       </div>
 
       <div className="relative mt-auto pt-20">
-        <p className="eyebrow text-grey-400">KORTEX</p>
+        <p className="eyebrow text-grey-400">
+          <BrandName />
+        </p>
         <h3 className="mt-2 text-[clamp(2.25rem,4.2vw,3.5rem)] leading-none font-semibold tracking-[-0.04em]">
           {universe.name}
         </h3>

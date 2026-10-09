@@ -5,6 +5,7 @@ import { CORE_UNIVERSES } from "@/data/universes";
 import { PHONE_URL, SITE, WHATSAPP_URL } from "@/lib/constants";
 import { LocaleSwitcher } from "./locale-switcher";
 import { Logo } from "./logo";
+import { BrandName } from "@/components/brand/brand-name";
 
 const linkClass = "text-grey-400 transition-colors duration-200 hover:text-paper";
 
@@ -40,7 +41,7 @@ export async function Footer() {
           {CORE_UNIVERSES.map((u) => (
             <li key={u.slug}>
               <Link href={`/universes#${u.slug}`} className={linkClass}>
-                KORTEX {u.name}
+                <BrandName /> {u.name}
               </Link>
             </li>
           ))}

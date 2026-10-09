@@ -4,6 +4,7 @@ import { Reveal } from "@/components/shared/reveal";
 import { Section } from "@/components/shared/section";
 import { SplitText } from "@/components/shared/split-text";
 import { VisionOrbit } from "./vision-orbit";
+import { brand } from "@/components/brand/brand-name";
 
 export async function Vision() {
   const t = await getTranslations("home.vision");
@@ -19,7 +20,7 @@ export async function Vision() {
             </h2>
           </Reveal>
           <Reveal delay={0.08}>
-            <p className="mt-8 text-lg leading-relaxed text-pretty text-grey-400">{t("text")}</p>
+            <p className="mt-8 text-lg leading-relaxed text-pretty text-grey-400">{brand(t("text"))}</p>
           </Reveal>
           <Reveal delay={0.16}>
             <p className="mt-10 border-l border-grey-700 pl-5 text-pretty text-grey-300">{t("ambition")}</p>

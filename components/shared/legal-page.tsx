@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { SITE } from "@/lib/constants";
+import { brand } from "@/components/brand/brand-name";
 
 type LegalPageProps = {
   namespace: "legal" | "privacy";
@@ -19,13 +20,13 @@ export async function LegalPage({ namespace, sections }: LegalPageProps) {
     <article className="container-page pt-36 pb-24 md:pt-48 md:pb-36">
       <h1 className="text-headline font-medium">{t("title")}</h1>
       <p className="mt-6 max-w-2xl rounded-card border border-dashed border-grey-300 p-4 text-sm text-grey-600">
-        {t("notice")}
+        {brand(t("notice"))}
       </p>
       <div className="mt-16 flex max-w-3xl flex-col gap-12">
         {sections.map((key) => (
           <section key={key} className="grid gap-4 md:grid-cols-[14rem_1fr]">
             <h2 className="font-medium tracking-tight">{section(key, "title")}</h2>
-            <p className="leading-relaxed whitespace-pre-line text-grey-700">{section(key, "body")}</p>
+            <p className="leading-relaxed whitespace-pre-line text-grey-700">{brand(section(key, "body"))}</p>
           </section>
         ))}
       </div>

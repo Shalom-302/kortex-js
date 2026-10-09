@@ -10,6 +10,7 @@ import { Reveal } from "@/components/shared/reveal";
 import { Section } from "@/components/shared/section";
 import { ExpansionList } from "@/components/universes/expansion-list";
 import { StatusBadge } from "@/components/universes/status-badge";
+import { BrandName, brand } from "@/components/brand/brand-name";
 
 const PHASES = ["foundation", "tech", "products", "universes", "ecosystem"] as const;
 
@@ -46,7 +47,9 @@ export default async function UniversesPage({ params }: PageProps<"/[locale]/uni
                     {t("status.active")}
                   </StatusBadge>
                 </div>
-                <p className="eyebrow mt-10 text-grey-400">KORTEX</p>
+                <p className="eyebrow mt-10 text-grey-400">
+                  <BrandName />
+                </p>
                 <h3 className="mt-2 flex items-center gap-4 text-[clamp(2.75rem,6vw,5rem)] leading-none font-semibold tracking-[-0.045em]">
                   {u.name}
                   <KMark className="size-5 text-grey-200 transition-[transform,color] duration-700 ease-out-soft group-hover:rotate-90 group-hover:text-ink" />
@@ -82,7 +85,7 @@ export default async function UniversesPage({ params }: PageProps<"/[locale]/uni
           </Reveal>
           <Reveal delay={0.06} className="md:col-span-7 md:col-start-6 md:pt-14">
             <p className="leading-relaxed text-grey-600">{t("expansionText")}</p>
-            <p className="mt-4 text-sm leading-relaxed text-grey-500">{t("disclaimer")}</p>
+            <p className="mt-4 text-sm leading-relaxed text-grey-500">{brand(t("disclaimer"))}</p>
           </Reveal>
         </div>
         <div className="mt-16">
@@ -115,7 +118,7 @@ export default async function UniversesPage({ params }: PageProps<"/[locale]/uni
               <h3 className={i === 0 ? "mt-6 text-xl font-medium tracking-tight" : "mt-6 text-xl font-medium tracking-tight text-grey-500"}>
                 {t(`roadmap.phases.${phase}.title`)}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-grey-600">{t(`roadmap.phases.${phase}.text`)}</p>
+              <p className="mt-3 text-sm leading-relaxed text-grey-600">{brand(t(`roadmap.phases.${phase}.text`))}</p>
             </Reveal>
           ))}
         </ol>
