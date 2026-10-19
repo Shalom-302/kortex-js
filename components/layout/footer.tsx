@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { KAtom } from "@/components/brand/k-atom";
 import { CORE_UNIVERSES } from "@/data/universes";
-import { PHONE_URL, SITE, WHATSAPP_URL } from "@/lib/constants";
+import { COMMUNITY_URL, PHONE_URL, SITE, WHATSAPP_URL } from "@/lib/constants";
 import { LocaleSwitcher } from "./locale-switcher";
 import { Logo } from "./logo";
 import { BrandName } from "@/components/brand/brand-name";
@@ -75,6 +75,11 @@ export async function Footer() {
           <li>
             <a href={`mailto:${SITE.email}`} className={`${linkClass} break-all`}>
               {SITE.email}
+            </a>
+          </li>
+          <li>
+            <a href={COMMUNITY_URL} target="_blank" rel="noopener noreferrer" className={linkClass}>
+              <BrandName /> Community
             </a>
           </li>
           <li className="text-grey-400">{SITE.city}</li>

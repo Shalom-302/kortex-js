@@ -25,6 +25,9 @@ export const WHATSAPP_URL = `https://wa.me/${SITE.phone.e164.replace("+", "")}`;
 
 /** WhatsApp chat with KORTEX, optionally with a message already typed in. */
 export const whatsappUrl = (text?: string) => (text ? `${WHATSAPP_URL}?text=${encodeURIComponent(text)}` : WHATSAPP_URL);
+/** KORTEX Community: open WhatsApp group for contributors and enthusiasts. */
+export const COMMUNITY_URL = "https://chat.whatsapp.com/CnEjuwNiZIJ2AWNiEsjlmk";
+
 export const PHONE_URL = `tel:${SITE.phone.e164}`;
 
 export const NEED_TYPES = ["design", "ai", "training", "other"] as const;

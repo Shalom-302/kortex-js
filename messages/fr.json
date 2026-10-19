@@ -20,7 +20,7 @@
     "universes": "Nos univers",
     "services": "Nos services",
     "about": "À propos",
-    "insights": "Insights",
+    "insights": "Journal",
     "careers": "Carrières",
     "contact": "Contact",
     "universesMenu": "Univers KORTEX",
@@ -312,10 +312,10 @@
   },
   "insights": {
     "meta": {
-      "title": "Insights",
+      "title": "Journal",
       "description": "Articles et analyses de KORTEX sur la technologie, l’IA, le design et la création."
     },
-    "eyebrow": "Insights",
+    "eyebrow": "Journal",
     "title": "Notes sur la technologie, la création et les univers KORTEX.",
     "emptyTitle": "Premiers articles en préparation.",
     "emptyText": "Nous publierons ici nos analyses et retours d’expérience. Revenez bientôt.",
@@ -326,11 +326,11 @@
   "careers": {
     "meta": {
       "title": "Carrières",
-      "description": "Rejoindre KORTEX DIGITAL à Abidjan : design, intelligence artificielle, développement et formation."
+      "description": "Rejoindre la KORTEX Community : contributions open source sur shaapi, design, développement et IA. À distance, depuis Abidjan et ailleurs."
     },
     "eyebrow": "Carrières",
     "title": "Construisons ensemble.",
-    "text": "KORTEX démarre. Nous cherchons des personnes exigeantes et curieuses, qui ont envie de construire une marque et ses univers.",
+    "text": "KORTEX démarre : pas de postes salariés pour l’instant. Nous construisons avec une communauté de passionnés, autour de projets réels et open source.",
     "lookingTitle": "Ce que nous recherchons",
     "looking": {
       "craft": "Le goût du travail bien fait",
@@ -338,10 +338,45 @@
       "ownership": "Le sens des responsabilités",
       "sharing": "L’envie de transmettre"
     },
-    "openingsTitle": "Postes ouverts",
-    "noOpenings": "Aucun poste ouvert pour le moment.",
-    "spontaneous": "Candidature spontanée",
-    "spontaneousText": "Envoyez-nous votre profil et quelques mots sur ce que vous aimeriez construire."
+    "openingsTitle": "Missions ouvertes",
+    "noOpenings": "Une mission ouverte en ce moment.",
+    "spontaneous": "Rejoindre la KORTEX Community",
+    "spontaneousText": "Développeurs, designers, curieux de l’IA : la communauté est ouverte. On y partage, on apprend et on construit ensemble.",
+    "job": {
+      "title": "Contributeur·rice open source — shaapi",
+      "summary": "Rejoins la KORTEX Community pour faire grandir shaapi, notre framework open source qui génère en quelques secondes des backends FastAPI prêts pour la production.",
+      "tags": {
+        "type": "Bénévole · Open source",
+        "place": "À distance",
+        "stack": "Python · FastAPI"
+      },
+      "missionTitle": "La mission",
+      "mission": {
+        "features": "Développer de nouvelles fonctionnalités et plugins",
+        "review": "Corriger les bugs et relire les contributions (pull requests)",
+        "docs": "Écrire et améliorer la documentation, en français et en anglais",
+        "help": "Accompagner les nouveaux utilisateurs dans la communauté"
+      },
+      "profileTitle": "Le profil",
+      "profile": {
+        "python": "Une bonne pratique de Python et de FastAPI",
+        "tools": "À l’aise avec Git, GitHub et Docker",
+        "plus": "PostgreSQL, Redis ou l’authentification JWT : un plus",
+        "mindset": "L’envie d’apprendre et de transmettre"
+      },
+      "offerTitle": "Ce que tu y gagnes",
+      "offer": {
+        "real": "Un vrai projet, utilisé, visible sur ton GitHub",
+        "mentoring": "Le mentorat de l’équipe KORTEX",
+        "community": "Une place dans la KORTEX Community"
+      },
+      "apply": "Postuler par email",
+      "subject": "Candidature — contributeur shaapi",
+      "repo": "Voir le dépôt GitHub",
+      "docs": "Lire la documentation"
+    },
+    "community": "Rejoindre sur WhatsApp",
+    "orEmail": "ou écrire à"
   },
   "contact": {
     "meta": {
