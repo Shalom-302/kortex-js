@@ -155,7 +155,15 @@ export function Header() {
             exit={reduce ? undefined : { opacity: 0 }}
             transition={{ duration: 0.25 }}
           >
-            <nav aria-label={t("primary")} className="container-page flex min-h-full flex-col pt-10 pb-10">
+            <nav
+              aria-label={t("primary")}
+              className="container-page flex min-h-full flex-col pt-10 pb-10"
+              // Any link closes the menu right away, including same-page and #anchor links
+              // that don't change the path.
+              onClick={(e) => {
+                if (e.target instanceof Element && e.target.closest("a")) setOpen(false);
+              }}
+            >
               <ul className="flex flex-col gap-1">
                 {[...NAV_ITEMS, { href: "/contact", key: "contact" } as const].map((item, i) => (
                   <motion.li

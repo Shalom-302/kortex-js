@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { usePathname } from "@/i18n/navigation";
 import { gsap, MOTION_OK, ScrollTrigger } from "./gsap";
+import { scrollToHash } from "./scroll-to-hash";
 import { useMediaQuery } from "./use-media-query";
 
 const INTERACTIVE = "a, button, input, textarea, select, label, [data-cursor]";
@@ -36,6 +37,28 @@ export function Effects() {
   useEffect(() => {
     ScrollTrigger.refresh();
   }, [pathname]);
+
+  useEffect(() => {
+    const onPop = () => (window.__kortexPop = true);
+    // A link to the page already shown does nothing in Next.js: "Home" on the home page brings
+    // the reader back to the top, "#section" links glide to their section.
+    const onClick = (e: MouseEvent) => {
+      // No defaultPrevented check: Next.js cancels the native click on every <Link>.
+      if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      const link = e.target instanceof Element ? e.target.closest("a") : null;
+      if (!link || link.target === "_blank" || link.origin !== window.location.origin) return;
+      if (link.pathname !== window.location.pathname) return;
+      if (link.hash) scrollToHash(link.hash);
+      // After the mobile menu has closed and released the page scroll.
+      else window.setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 60);
+    };
+    window.addEventListener("popstate", onPop);
+    document.addEventListener("click", onClick);
+    return () => {
+      window.removeEventListener("popstate", onPop);
+      document.removeEventListener("click", onClick);
+    };
+  }, []);
 
   return (
     <>
