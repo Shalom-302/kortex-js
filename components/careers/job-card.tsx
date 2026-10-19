@@ -32,7 +32,7 @@ export function JobCard({ title, summary, tags, groups, actions }: JobCardProps)
           <h3 className="mt-8 text-[clamp(2rem,4vw,3.25rem)] leading-[1.02] font-semibold tracking-[-0.04em] text-balance">{title}</h3>
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-grey-200">{summary}</p>
         </div>
-        <ShaapiTerminal className="h-[17rem] md:h-[19rem]" />
+        <ShaapiTerminal className="min-h-[17rem] lg:h-[19rem]" />
       </div>
 
       <div className="mt-12 grid gap-10 border-t border-grey-800 pt-10 md:grid-cols-3">

@@ -19,6 +19,7 @@
     "home": "Accueil",
     "universes": "Nos univers",
     "services": "Nos services",
+    "work": "Réalisations",
     "about": "À propos",
     "insights": "Journal",
     "careers": "Carrières",
@@ -51,7 +52,8 @@
         "place": "Abidjan · Côte d’Ivoire",
         "time": "Heure locale",
         "status": "En ligne"
-      }
+      },
+      "eyebrowShort": "Abidjan"
     },
     "immersion": {
       "eyebrow": "Immersion",
@@ -119,7 +121,8 @@
           "title": "Ancrés ici, ouverts partout",
           "text": "Une marque ivoirienne, avec une ambition au-delà du marché local."
         }
-      }
+      },
+      "swipe": "Glissez pour voir la suite"
     },
     "vision": {
       "eyebrow": "Notre vision",

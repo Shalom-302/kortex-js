@@ -38,7 +38,7 @@ export const PROJECTS: Project[] = [
     slug: "sevoil",
     name: "SEV-OIL",
     // Waiting for SEV-OIL's own domain; add `url` once it points to the site.
-    display: "SEV MARITIME OIL-LOGISTICS",
+    display: "SEV-OIL",
     sector: { fr: "Énergie · Logistique pétrolière", en: "Energy · Fuel logistics" },
     summary: {
       fr: "Un site bilingue pour un distributeur de produits pétroliers : stations-service, sites miniers et soutage maritime à Abidjan et San-Pédro, avec demande de devis en ligne.",

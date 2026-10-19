@@ -25,7 +25,7 @@ export function ImmersionStage({ before, after, children }: ImmersionStageProps)
       mm.add(MOTION_OK, () => {
         const tl = gsap.timeline({
           defaults: { ease: "none" },
-          scrollTrigger: { trigger: root.current, start: "top top", end: "+=160%", pin: true, scrub: 0.8 },
+          scrollTrigger: { trigger: root.current, start: "top top", end: "+=130%", pin: true, scrub: 0.8 },
         });
         tl.fromTo(
           "[data-imm=frame]",

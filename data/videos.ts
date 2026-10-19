@@ -1,6 +1,7 @@
 /**
  * Short silent loops (Mixkit, free licence for commercial use: https://mixkit.co/license/).
- * Self-hosted in /public/videos, each with a poster frame. Shown in black and white.
+ * Self-hosted in /public/videos, re-encoded as light 8 to 10 s grayscale loops (H.264, no audio),
+ * each with a poster frame.
  */
 export type SiteVideo = { src: string; poster: string };
 

@@ -47,14 +47,14 @@ export function ShaapiTerminal({ className }: { className?: string }) {
   return (
     <div ref={root} className={className}>
       <p className="sr-only">pip install shaapi, shaapi new, shaapi up : une API FastAPI prête en moins d’une minute.</p>
-      <div aria-hidden className="flex h-full flex-col overflow-hidden rounded-[0.5rem] border border-grey-800 bg-ink font-mono text-[0.8125rem] leading-relaxed md:text-sm">
+      <div aria-hidden className="flex h-full flex-col overflow-hidden rounded-[0.5rem] border border-grey-800 bg-ink font-mono text-xs leading-relaxed sm:text-[0.8125rem] md:text-sm">
         <div className="flex items-center gap-2 border-b border-grey-800 px-4 py-3">
           <span className="size-2.5 rounded-full bg-grey-700" />
           <span className="size-2.5 rounded-full bg-grey-700" />
           <span className="size-2.5 rounded-full bg-grey-700" />
           <span className="ml-3 text-xs text-grey-400">~/projects</span>
         </div>
-        <div className="flex-1 space-y-1.5 p-5 md:p-6">
+        <div className="flex-1 space-y-1.5 p-4 break-words sm:p-5 md:p-6">
           {LINES.map((line, i) => (
             <p key={i} data-term="row" className={line.kind === "cmd" ? "text-paper" : line.kind === "ok" ? "text-grey-200" : "text-grey-400"}>
               {line.kind === "cmd" && <span className="mr-2 text-grey-500">$</span>}

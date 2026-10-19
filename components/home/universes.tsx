@@ -1,11 +1,12 @@
 import { getLocale, getTranslations } from "next-intl/server";
-import { CORE_UNIVERSES } from "@/data/universes";
+import { CORE_UNIVERSES, EXPANSION_UNIVERSES } from "@/data/universes";
 import { ButtonLink } from "@/components/ui/button";
 import { Reveal } from "@/components/shared/reveal";
 import { Section } from "@/components/shared/section";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { CoreUniverseCard } from "@/components/universes/core-universe-card";
-import { ExpansionList } from "@/components/universes/expansion-list";
+import { Link } from "@/i18n/navigation";
+import { BrandName } from "@/components/brand/brand-name";
 import { StatusBadge } from "@/components/universes/status-badge";
 
 export async function Universes() {
@@ -47,9 +48,21 @@ export async function Universes() {
         <Reveal delay={0.05}>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-grey-500">{tu("expansionText")}</p>
         </Reveal>
-        <div className="mt-10">
-          <ExpansionList locale={locale} />
-        </div>
+        {/* Names only: the full modules live on /universes. */}
+        <Reveal delay={0.1}>
+          <ul className="mt-8 flex flex-wrap gap-2">
+            {EXPANSION_UNIVERSES.map((u) => (
+              <li key={u.slug}>
+                <Link
+                  href={`/universes#${u.slug}`}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-dashed border-grey-300 px-3.5 py-1.5 text-sm font-medium tracking-[0.04em] text-grey-700 transition-colors duration-300 hover:border-solid hover:border-ink hover:text-ink"
+                >
+                  <BrandName /> {u.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
         <Reveal className="mt-12">
           <ButtonLink href="/universes" variant="secondary" arrow>
             {t("cta")}

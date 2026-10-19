@@ -90,7 +90,7 @@ export async function Work() {
                     </div>
                   </div>
                 ) : (
-                  <ShaapiTerminal className="h-[16rem] sm:h-[22rem] md:h-[min(52svh,30rem)]" />
+                  <ShaapiTerminal className="min-h-[16rem] md:h-[min(52svh,30rem)]" />
                 )}
               </article>
             </li>

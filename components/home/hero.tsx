@@ -31,7 +31,8 @@ export async function Hero() {
           <Reveal>
             <p className="eyebrow text-grey-300">
               <BrandName /> DIGITAL <span className="mx-2 text-grey-500">/</span>{" "}
-              <ScrambleText immediate delay={0.2} text={t("eyebrow")} />
+              <span className="sm:hidden">{t("eyebrowShort")}</span>
+              <ScrambleText immediate delay={0.2} text={t("eyebrow")} className="max-sm:hidden" />
             </p>
           </Reveal>
           <h1 className="mt-8 max-w-4xl text-display font-semibold text-balance text-paper">

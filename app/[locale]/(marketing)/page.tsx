@@ -15,8 +15,8 @@ import { Vision } from "@/components/home/vision";
 import { Work } from "@/components/home/work";
 
 // Reading order follows the brand hierarchy:
-// KORTEX (flight into the K) → immersion → an ecosystem → DESIGN / AI / TRAINING → the work in
-// motion → offers → delivered work → approach → the other universes → contact.
+// KORTEX (flight into the K) → immersion → an ecosystem → DESIGN / AI / TRAINING → delivered
+// work (proof early) → offers → the work in motion → approach → vision → contact.
 export default async function HomePage({ params }: PageProps<"/[locale]">) {
   const { locale } = await params;
   setRequestLocale(locale as Locale);
@@ -28,9 +28,9 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       <UniverseMarquee items={UNIVERSES.map((u) => `KORTEX ${u.name}`)} />
       <Manifesto />
       <Universes />
-      <Gallery />
-      <Services />
       <Work />
+      <Services />
+      <Gallery />
       <Approach />
       <Vision />
       <About />

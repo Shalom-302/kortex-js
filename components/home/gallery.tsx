@@ -42,7 +42,7 @@ export async function Gallery() {
   );
 
   return (
-    <GalleryTrack header={header}>
+    <GalleryTrack header={header} swipeHint={t("swipe")}>
       {PANELS.map((panel, i) => (
         <li
           key={panel.key}

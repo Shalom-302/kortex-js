@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, type ReactNode } from "react";
+import { ChevronRight } from "lucide-react";
 import { gsap, MOTION_OK, useGSAP } from "@/components/motion/gsap";
 
 /**
@@ -8,9 +9,18 @@ import { gsap, MOTION_OK, useGSAP } from "@/components/motion/gsap";
  * the panels sideways, each frame drifting inside its window (parallax). On phones and
  * with reduced motion it is a plain swipeable row.
  */
-export function GalleryTrack({ children, header }: { children: ReactNode; header: ReactNode }) {
+export function GalleryTrack({ children, header, swipeHint }: { children: ReactNode; header: ReactNode; swipeHint: string }) {
   const root = useRef<HTMLElement>(null);
   const track = useRef<HTMLUListElement>(null);
+  const bar = useRef<HTMLSpanElement>(null);
+
+  // Phones: the strip is swiped by hand; a bar shows how far along it is.
+  const onSwipe = () => {
+    const el = track.current;
+    if (!el || !bar.current) return;
+    const max = el.scrollWidth - el.clientWidth;
+    bar.current.style.transform = `scaleX(${max > 0 ? Math.max(0.08, el.scrollLeft / max) : 1})`;
+  };
 
   useGSAP(
     () => {
@@ -59,10 +69,20 @@ export function GalleryTrack({ children, header }: { children: ReactNode; header
       <div className="container-page">{header}</div>
       <ul
         ref={track}
+        onScroll={onSwipe}
         className="mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 [scrollbar-width:none] md:mt-14 md:w-max md:snap-none md:gap-6 md:overflow-visible md:px-[max(2rem,calc((100vw-80rem)/2+2.5rem))] md:pb-0"
       >
         {children}
       </ul>
+      <div className="container-page mt-6 flex items-center gap-4 md:hidden">
+        <span className="relative h-0.5 flex-1 overflow-hidden rounded-full bg-grey-800">
+          <span ref={bar} className="absolute inset-0 origin-left scale-x-[0.08] bg-paper transition-transform duration-150" />
+        </span>
+        <span className="eyebrow flex items-center gap-1 text-grey-300">
+          {swipeHint}
+          <ChevronRight aria-hidden className="size-4 animate-pulse" />
+        </span>
+      </div>
     </section>
   );
 }

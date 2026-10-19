@@ -19,6 +19,7 @@
     "home": "Home",
     "universes": "Our universes",
     "services": "Our services",
+    "work": "Our work",
     "about": "About",
     "insights": "Journal",
     "careers": "Careers",
@@ -51,7 +52,8 @@
         "place": "Abidjan · Côte d’Ivoire",
         "time": "Local time",
         "status": "Online"
-      }
+      },
+      "eyebrowShort": "Abidjan"
     },
     "immersion": {
       "eyebrow": "Immersion",
@@ -119,7 +121,8 @@
           "title": "Rooted here, open everywhere",
           "text": "An Ivorian brand, with ambitions beyond the local market."
         }
-      }
+      },
+      "swipe": "Swipe to see more"
     },
     "vision": {
       "eyebrow": "Our vision",
