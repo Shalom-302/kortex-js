@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { getTranslations } from "next-intl/server";
+import { Effects } from "@/components/motion/effects";
 import { Footer } from "./footer";
 import { Header } from "./header";
 
@@ -19,6 +20,7 @@ export async function SiteShell({ children }: { children: ReactNode }) {
         {children}
       </main>
       <Footer />
+      <Effects />
     </>
   );
 }

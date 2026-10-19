@@ -12,8 +12,17 @@ import { Logo } from "./logo";
 import { NAV_ITEMS } from "./nav-items";
 import { BrandName, brand } from "@/components/brand/brand-name";
 
-// Pages whose first screen is black: the header starts inverted there.
-const DARK_TOP = new Set(["/"]);
+// Height of the bar: a [data-dark] section under this line turns the header black.
+const BAR = 72;
+
+/** True when a dark band ([data-dark]) sits under the header bar. */
+function overDark() {
+  for (const el of document.querySelectorAll("[data-dark]")) {
+    const r = el.getBoundingClientRect();
+    if (r.top <= BAR / 2 && r.bottom > BAR / 2) return true;
+  }
+  return false;
+}
 
 export function Header() {
   const t = useTranslations("nav");
@@ -21,6 +30,7 @@ export function Header() {
   const pathname = usePathname();
   const reduce = useReducedMotion();
   const [scrolled, setScrolled] = useState(false);
+  const [onDark, setOnDark] = useState(false);
   const [open, setOpen] = useState(false);
   const [lastPath, setLastPath] = useState(pathname);
 
@@ -31,11 +41,25 @@ export function Header() {
   }
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      setScrolled(window.scrollY > 8);
+      setOnDark(overDark());
+    };
+    const onScroll = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
+    update();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    window.addEventListener("resize", onScroll);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+    // Re-check on navigation: the new page may start on a dark band.
+  }, [pathname]);
 
   useEffect(() => {
     if (!open) return;
@@ -50,14 +74,16 @@ export function Header() {
 
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
-  const dark = open || (DARK_TOP.has(pathname) && !scrolled);
+  const dark = open || onDark;
 
   return (
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 border-b transition-[background-color,border-color,color] duration-300",
         dark
-          ? "border-transparent bg-ink text-paper"
+          ? scrolled && !open
+            ? "border-grey-800 bg-ink/80 text-paper backdrop-blur-md"
+            : "border-transparent bg-ink text-paper"
           : scrolled
             ? "border-grey-200 bg-paper/85 text-ink backdrop-blur-md"
             : "border-transparent bg-paper text-ink",

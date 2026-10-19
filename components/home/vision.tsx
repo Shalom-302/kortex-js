@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { decode } from "@/components/motion/decode";
 import { CORE_UNIVERSES, EXPANSION_UNIVERSES } from "@/data/universes";
 import { Reveal } from "@/components/shared/reveal";
 import { Section } from "@/components/shared/section";
@@ -14,7 +15,7 @@ export async function Vision() {
       <div className="grid items-center gap-16 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <Reveal>
-            <p className="eyebrow text-grey-500">{t("eyebrow")}</p>
+            <p className="eyebrow text-grey-500">{decode(t("eyebrow"))}</p>
             <h2 className="mt-6 text-headline font-medium text-balance">
               <SplitText text={t("title")} />
             </h2>

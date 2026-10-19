@@ -2,6 +2,8 @@ import { getTranslations } from "next-intl/server";
 import { ButtonLink } from "@/components/ui/button";
 import { KMark } from "@/components/brand/k-mark";
 import { PHONE_URL, SITE, whatsappUrl } from "@/lib/constants";
+import { decode } from "@/components/motion/decode";
+import { CtaBackdrop } from "./cta-backdrop";
 import { Reveal } from "./reveal";
 import { SplitText } from "./split-text";
 import { brand } from "@/components/brand/brand-name";
@@ -48,12 +50,13 @@ export async function CtaBand() {
   ];
 
   return (
-    <section id="contact" className="relative isolate overflow-hidden bg-ink text-paper">
+    <section id="contact" data-dark className="relative isolate overflow-hidden bg-ink text-paper">
+      <CtaBackdrop className="pointer-events-none absolute inset-y-0 right-0 -z-10 w-full text-paper md:w-3/5" />
       <div className="container-page py-28 md:py-44">
         <Reveal>
           <p className="eyebrow flex items-center gap-3 text-grey-500">
             <KMark className="size-4" />
-            {t("eyebrow")}
+            {decode(t("eyebrow"))}
           </p>
         </Reveal>
         <h2 className="mt-10 text-[clamp(3.25rem,11.5vw,10.5rem)] leading-[0.88] font-semibold tracking-[-0.055em] text-balance">
@@ -62,7 +65,7 @@ export async function CtaBand() {
 
         <Reveal delay={0.12} className="mt-14 flex flex-col gap-8 md:mt-20 md:flex-row md:items-end md:justify-between">
           <p className="max-w-md text-lg leading-relaxed text-grey-400">{t("text")}</p>
-          <ButtonLink href="/contact" variant="inverted" size="lg" arrow>
+          <ButtonLink href="/contact" variant="inverted" size="lg" arrow data-magnetic>
             {tc("startProject")}
           </ButtonLink>
         </Reveal>
@@ -70,7 +73,7 @@ export async function CtaBand() {
         <Reveal delay={0.18}>
           <dl className="mt-20 grid gap-px overflow-hidden rounded-card border border-grey-800 bg-grey-800 sm:grid-cols-2 lg:grid-cols-4">
             {items.map((item) => (
-              <div key={item.label} className="bg-ink p-6 md:p-8">
+              <div key={item.label} data-spotlight className="spotlight bg-ink p-6 md:p-8">
                 <dt className="eyebrow text-grey-500">{item.label}</dt>
                 <dd className="mt-4 text-lg tracking-tight">{item.content}</dd>
               </div>

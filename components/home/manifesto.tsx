@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { decode } from "@/components/motion/decode";
 import { KMark } from "@/components/brand/k-mark";
 import { Reveal } from "@/components/shared/reveal";
 import { Section } from "@/components/shared/section";
@@ -17,7 +18,7 @@ export async function Manifesto() {
         <Reveal className="md:col-span-3 md:pt-3">
           <p className="eyebrow flex items-center gap-3 text-grey-500">
             <KMark className="size-4" />
-            {t("eyebrow")}
+            {decode(t("eyebrow"))}
           </p>
         </Reveal>
         <div className="md:col-span-9">

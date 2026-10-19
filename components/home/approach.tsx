@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { decode } from "@/components/motion/decode";
 import { Reveal } from "@/components/shared/reveal";
 import { Section } from "@/components/shared/section";
 import { SplitText } from "@/components/shared/split-text";
@@ -14,7 +15,7 @@ export async function Approach() {
       <div className="grid gap-16 md:grid-cols-12">
         <div className="md:col-span-4">
           <Reveal className="md:sticky md:top-32">
-            <p className="eyebrow text-grey-500">{t("eyebrow")}</p>
+            <p className="eyebrow text-grey-500">{decode(t("eyebrow"))}</p>
             <h2 className="mt-6 text-headline font-medium text-balance">
               <SplitText text={t("title")} />
             </h2>

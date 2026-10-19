@@ -1,5 +1,5 @@
 /**
- * Temporary stock photography (Unsplash).
+ * Temporary stock photography (Unsplash). No people: only places, objects and textures.
  * Replace each entry with KORTEX's own photos in /public/images when available —
  * components only reference these keys, so swapping `src` (e.g. "/images/team.jpg") is enough.
  */
@@ -28,22 +28,6 @@ export const IMAGES = {
     },
     credit: { name: "djebi abraham philippe", url: "https://unsplash.com/photos/bRVtv5VEXUE" },
   },
-  team: {
-    src: unsplash("photo-1655720357872-ce227e4164ba"),
-    alt: {
-      fr: "Trois jeunes femmes travaillent ensemble autour d’un ordinateur portable",
-      en: "Three young women working together around a laptop",
-    },
-    credit: { name: "Iwaria Inc.", url: "https://unsplash.com/photos/M7ALc3UuX_g" },
-  },
-  software: {
-    src: unsplash("photo-1730130054404-c2bd8e7038c2"),
-    alt: {
-      fr: "Développeur devant un grand écran affichant du code",
-      en: "Developer in front of a large screen showing code",
-    },
-    credit: { name: "Olumuyiwa Sobowale", url: "https://unsplash.com/photos/kQIdjLbCghA" },
-  },
   ai: {
     src: unsplash("photo-1592659762303-90081d34b277"),
     alt: {
@@ -67,38 +51,6 @@ export const IMAGES = {
       en: "Video editing timeline on a screen",
     },
     credit: { name: "Peter Stumpf", url: "https://unsplash.com/photos/yk9VXp4W5-Q" },
-  },
-  academy: {
-    src: unsplash("photo-1653566031587-74f7d86a2e71"),
-    alt: {
-      fr: "Une formatrice anime une session devant des professionnels équipés d’ordinateurs",
-      en: "A trainer leads a session for professionals working on laptops",
-    },
-    credit: { name: "UK Black Tech", url: "https://unsplash.com/photos/uZyE3w7khzw" },
-  },
-  workshop: {
-    src: unsplash("photo-1653565684985-0b1a64cf7afc"),
-    alt: {
-      fr: "Atelier en salle de réunion, une intervenante échange avec les participants",
-      en: "Workshop in a meeting room, a speaker engaging with participants",
-    },
-    credit: { name: "UK Black Tech", url: "https://unsplash.com/photos/3gO_bWev2jQ" },
-  },
-  labs: {
-    src: unsplash("photo-1649959168260-2eb9702d7b69"),
-    alt: {
-      fr: "Carte électronique de prototypage posée sur une table",
-      en: "Electronics prototyping board on a table",
-    },
-    credit: { name: "Vishnu Mohanan", url: "https://unsplash.com/photos/kyDsOF8gsIA" },
-  },
-  careers: {
-    src: unsplash("photo-1642929426263-caf1617ced29"),
-    alt: {
-      fr: "Jeune professionnelle souriante dans un bureau moderne",
-      en: "Smiling young professional in a modern office",
-    },
-    credit: { name: "Francis Odeyemi", url: "https://unsplash.com/photos/Xq-RY9z8VY4" },
   },
   texture1: {
     src: unsplash("photo-1521194263619-39ecc5b55c61"),

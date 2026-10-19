@@ -39,7 +39,7 @@ export function UniverseMarquee({ items }: { items: string[] }) {
   const row = items.flatMap((item) => [item, "•"]);
 
   return (
-    <div className="overflow-hidden border-y border-grey-800 bg-ink py-6 text-paper md:py-8" aria-hidden>
+    <div data-dark className="overflow-hidden border-y border-grey-800 bg-ink py-6 text-paper md:py-8" aria-hidden>
       <motion.div className="flex w-max whitespace-nowrap" style={{ x, skewX: reduce ? 0 : skew }}>
         {[0, 1].map((copy) => (
           <div key={copy} className="flex shrink-0 items-center">

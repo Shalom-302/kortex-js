@@ -26,7 +26,8 @@ export async function Services() {
               as="li"
               key={group.universe}
               delay={i * 0.08}
-              className="flex flex-col rounded-card border border-grey-200 bg-paper p-7 transition-colors duration-500 hover:border-grey-400 md:p-8"
+              data-spotlight
+              className="spotlight flex flex-col rounded-card border border-grey-200 bg-paper p-7 transition-colors duration-500 hover:border-grey-400 md:p-8"
             >
               <p className="eyebrow text-grey-400">
                 <BrandName />

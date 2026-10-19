@@ -16,6 +16,7 @@ export function Section({
 }: SectionProps) {
   return (
     <section
+      data-dark={tone === "dark" || undefined}
       className={cn(
         tone === "dark" && "bg-ink text-paper",
         tone === "muted" && "bg-grey-50",

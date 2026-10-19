@@ -116,8 +116,131 @@
 
 @utility eyebrow {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  line-height: 1rem;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+/* Light that follows the pointer (coordinates set by components/motion/effects.tsx).
+   Difference blending: a soft glow on black surfaces, a soft shade on white ones. */
+@utility spotlight {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    background: radial-gradient(22rem circle at var(--mx, 50%) var(--my, 50%), rgb(255 255 255 / 0.12), transparent 65%);
+    mix-blend-mode: difference;
+    transition: opacity 0.5s var(--ease-out-soft);
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+/* Hero HUD: perspective floor grid flowing toward the viewer. */
+.hud-grid {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.1) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(to top, black 5%, transparent 70%);
+  animation: hud-grid-flow 2.6s linear infinite;
+}
+
+/* Hero HUD: a faint line sweeping down the screen. */
+.hud-scan {
+  animation: hud-scan 7s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@keyframes hud-grid-flow {
+  to {
+    background-position: 0 56px;
+  }
+}
+
+@keyframes hud-scan {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  10%,
+  85% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+/* Contact band: rings radiating from the K like a radar. */
+.radar-ring {
+  animation: radar 6s cubic-bezier(0.2, 0.6, 0.4, 1) infinite both;
+}
+
+@keyframes radar {
+  from {
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 0.5;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+
+/*
+ * Legibility layer. Grey text is stepped toward the background's opposite so every label
+ * stays readable: the faintest grey darkens on white, and greys lighten on black bands
+ * ([data-dark]). :where() keeps specificity at one class, so hover/focus colours still win.
+ */
+@layer utilities {
+  .text-grey-400 {
+    color: var(--color-grey-500);
+  }
+
+  :where([data-dark]) .text-grey-400 {
+    color: var(--color-grey-300);
+  }
+
+  :where([data-dark]) .text-grey-500,
+  :where([data-dark]) .text-grey-600 {
+    color: var(--color-grey-400);
+  }
+
+  :where([data-dark]) .text-grey-700 {
+    color: var(--color-grey-500);
+  }
+}
+
+/* Expansion universes: a light that keeps scanning along the bar, "still being built". */
+.build-bar {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset-block: 0;
+    width: 35%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, transparent, var(--color-ink), transparent);
+    animation: build-scan 2.4s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  }
+}
+
+@keyframes build-scan {
+  from {
+    left: -35%;
+  }
+  to {
+    left: 100%;
+  }
 }

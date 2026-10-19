@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Reveal } from "./reveal";
-import { brand, brandChildren } from "@/components/brand/brand-name";
+import { brandChildren } from "@/components/brand/brand-name";
+import { decode } from "@/components/motion/decode";
 
 type PageHeaderProps = {
   eyebrow: string;
@@ -14,7 +15,7 @@ export function PageHeader({ eyebrow, title, text, children }: PageHeaderProps) 
   return (
     <header className="container-page pt-36 pb-16 md:pt-48 md:pb-24">
       <Reveal>
-        <p className="eyebrow text-grey-500">{brand(eyebrow)}</p>
+        <p className="eyebrow text-grey-500">{decode(eyebrow)}</p>
         <h1 className="mt-6 max-w-5xl text-display font-medium text-balance">{brandChildren(title)}</h1>
       </Reveal>
       {text && (

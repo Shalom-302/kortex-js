@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "KORTEX | Technologie • Créativité • Expériences",
-    "description": "KORTEX est une marque ivoirienne qui utilise la technologie pour créer des produits, des services et des expériences dans plusieurs univers : design, intelligence artificielle, formation, et au-delà."
+    "title": "KORTEX DIGITAL | Technologie • Créativité • Expériences",
+    "description": "KORTEX DIGITAL est une entreprise technologique ivoirienne basée à Abidjan : design, intelligence artificielle, développement web et formation. La marque KORTEX crée des produits, des services et des expériences dans plusieurs univers."
   },
   "common": {
     "skipToContent": "Aller au contenu",
@@ -49,6 +49,13 @@
       "primary": "Découvrir KORTEX",
       "scroll": "Défiler"
     },
+    "immersion": {
+      "eyebrow": "Immersion",
+      "before": "Entrez dans",
+      "after": "l’univers KORTEX",
+      "title": "Le digital, vu de l’intérieur.",
+      "text": "Code, circuits, données, design : chez KORTEX, la technologie n’est pas un décor. C’est la matière avec laquelle nous construisons chaque univers."
+    },
     "manifesto": {
       "eyebrow": "La marque",
       "title": "Plus qu’une entreprise, un écosystème.",
@@ -67,6 +74,49 @@
       "text": "Trois univers portent aujourd’hui l’activité de KORTEX. D’autres se construisent, à leur rythme, autour du même socle technologique.",
       "cta": "Explorer tous les univers"
     },
+    "gallery": {
+      "eyebrow": "En mouvement",
+      "title": "Le digital, en mouvement.",
+      "text": "Ce qui fait tourner l’écosystème KORTEX, au quotidien.",
+      "hint": "Faites défiler",
+      "items": {
+        "circuits": {
+          "label": "KORTEX AI",
+          "title": "Des systèmes qui apprennent",
+          "text": "Agents IA, LLM et automatisations, pensés pour vos métiers."
+        },
+        "design": {
+          "label": "KORTEX DESIGN",
+          "title": "Des interfaces qui marquent",
+          "text": "Identités, interfaces et motion design, au pixel près."
+        },
+        "labs": {
+          "label": "Prototypes",
+          "title": "Construire, tester, recommencer",
+          "text": "Chaque idée passe par l’atelier avant d’arriver chez vous."
+        },
+        "training": {
+          "label": "KORTEX TRAINING",
+          "title": "Transmettre ce que l’on sait",
+          "text": "Formations et accompagnement pour faire monter les équipes en compétence."
+        },
+        "infra": {
+          "label": "Infrastructure",
+          "title": "Des fondations solides",
+          "text": "Cloud, données et déploiement : ce qui ne se voit pas, mais qui tient tout."
+        },
+        "code": {
+          "label": "Développement",
+          "title": "Du code propre, livré",
+          "text": "Sites, applications et outils sur mesure, maintenus dans la durée."
+        },
+        "city": {
+          "label": "Abidjan → le monde",
+          "title": "Ancrés ici, ouverts partout",
+          "text": "Une marque ivoirienne, avec une ambition au-delà du marché local."
+        }
+      }
+    },
     "vision": {
       "eyebrow": "Notre vision",
       "title": "Une marque. Plusieurs mouvements.",
@@ -79,6 +129,15 @@
       "title": "Des offres claires pour démarrer.",
       "text": "Les univers opérationnels de KORTEX, et ce qu’ils peuvent faire pour vous dès aujourd’hui.",
       "cta": "Tous les services"
+    },
+    "work": {
+      "eyebrow": "Réalisations",
+      "title": "Déjà en ligne, déjà utilisés.",
+      "text": "Des projets livrés pour nos clients, et le framework que nous avons construit pour aller plus vite. Un aperçu de ce que KORTEX fait déjà.",
+      "visit": "Voir le site",
+      "docs": "Lire la documentation",
+      "client": "Projet client",
+      "inHouse": "Conçu par KORTEX"
     },
     "approach": {
       "eyebrow": "Notre approche",

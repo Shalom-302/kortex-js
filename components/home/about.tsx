@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { decode } from "@/components/motion/decode";
 import { ButtonLink } from "@/components/ui/button";
 import { CompanyFacts } from "@/components/shared/company-facts";
 import { Reveal } from "@/components/shared/reveal";
@@ -11,7 +12,7 @@ export async function About() {
     <Section className="border-t border-grey-200">
       <div className="grid gap-14 md:grid-cols-12">
         <Reveal className="md:col-span-5">
-          <p className="eyebrow text-grey-500">{t("eyebrow")}</p>
+          <p className="eyebrow text-grey-500">{decode(t("eyebrow"))}</p>
           <h2 className="mt-6 text-headline font-medium text-balance">{t("title")}</h2>
           <p className="mt-6 max-w-md text-lg leading-relaxed text-pretty text-grey-600">{t("text")}</p>
           <ButtonLink href="/about" variant="secondary" arrow className="mt-10">

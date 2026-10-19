@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { insideK } from "@/components/brand/k-mark";
+import { flight } from "./flight";
 import { HeroK } from "./hero-k";
 
 const K_CENTER = { x: 12, y: 12 };
@@ -149,6 +150,10 @@ export default function HeroSceneCanvas({ className }: { className?: string }) {
     group.add(points);
     scene.add(group);
 
+    // Resting layout, before the scroll flight takes over.
+    let baseX = 0;
+    let baseOpacity = 1;
+
     const resize = () => {
       const { clientWidth: w, clientHeight: h } = host;
       if (!w || !h) return;
@@ -158,9 +163,9 @@ export default function HeroSceneCanvas({ className }: { className?: string }) {
       // Desktop: letter sits on the right. Mobile: centred, quieter, behind the text.
       const visibleH = 2 * Math.tan((camera.fov * Math.PI) / 360) * camera.position.z;
       const wide = camera.aspect > 1.1;
-      group.position.x = wide ? visibleH * camera.aspect * 0.22 : 0;
+      baseX = wide ? visibleH * camera.aspect * 0.22 : 0;
       group.scale.setScalar(wide ? 1 : 0.85);
-      material.uniforms.uOpacity.value = wide ? 1 : 0.45;
+      baseOpacity = wide ? 1 : 0.45;
     };
     resize();
     const ro = new ResizeObserver(resize);
@@ -180,6 +185,13 @@ export default function HeroSceneCanvas({ className }: { className?: string }) {
     const render = () => {
       const t = (performance.now() - startedAt) / 1000;
       material.uniforms.uTime.value = t;
+      // Flight: the K slides to the centre while the camera dives through it.
+      const f = flight.progress;
+      const dive = f * f;
+      group.position.x = baseX * (1 - Math.min(1, f * 2.2));
+      camera.position.z = 48 - dive * 58;
+      // Past the K, only the dust remains: stars streaming by as the next section arrives.
+      material.uniforms.uOpacity.value = Math.max(baseOpacity, Math.min(1, f * 1.2)) * (1 - 0.35 * THREE.MathUtils.smoothstep(f, 0.8, 1));
       if (!reduce) {
         material.uniforms.uProgress.value = Math.min(1, t / 3.2);
         const targetY = Math.sin(t * 0.18) * 0.35 + pointer.x * 0.35;

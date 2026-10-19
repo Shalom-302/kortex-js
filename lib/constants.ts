@@ -3,8 +3,10 @@ import type { Localized } from "./utils";
 export const SITE = {
   name: "KORTEX DIGITAL",
   shortName: "KORTEX",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://kortex.digital",
-  email: "shalomtehe219@gmail.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://kortexdigital.net",
+  email: "contact@kortexdigital.net",
+  // Receives contact-form requests while Resend's test sender is used (it only delivers to the account owner).
+  founderEmail: "shalomtehe219@gmail.com",
   phone: {
     display: "07 12 11 62 58",
     // Côte d’Ivoire (+225), 10-digit national number.

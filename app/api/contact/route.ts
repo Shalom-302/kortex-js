@@ -30,11 +30,11 @@ export async function POST(request: Request) {
   const data = parsed.data;
 
   const apiKey = process.env.RESEND_API_KEY;
-  // Until a professional mailbox and a verified domain exist, requests go to the founder's
-  // address and are sent from Resend's test sender (which can only deliver to the account owner).
-  const to = process.env.CONTACT_TO_EMAIL || SITE.email;
+  // Until kortexdigital.net is verified in Resend, requests are sent from Resend's test sender,
+  // which can only deliver to the account owner: the founder's address. After that, the pro mailbox.
   const from = process.env.CONTACT_FROM_EMAIL || "KORTEX <onboarding@resend.dev>";
   const testSender = from.includes("@resend.dev");
+  const to = process.env.CONTACT_TO_EMAIL || (testSender ? SITE.founderEmail : SITE.email);
 
   if (!apiKey) {
     if (process.env.NODE_ENV !== "production") {

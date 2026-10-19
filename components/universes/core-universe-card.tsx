@@ -20,7 +20,9 @@ export function CoreUniverseCard({ universe, index, locale, href, statusLabel, l
   return (
     <Link
       href={href}
-      className="group relative flex h-full min-h-[26rem] flex-col overflow-hidden rounded-card border border-grey-200 bg-paper p-7 transition-colors duration-500 ease-out-soft hover:border-ink hover:bg-ink hover:text-paper focus-visible:bg-ink focus-visible:text-paper md:p-8"
+      data-tilt
+      data-spotlight
+      className="spotlight group relative flex h-full min-h-[26rem] flex-col overflow-hidden rounded-card border border-grey-200 bg-paper p-7 transition-colors duration-500 ease-out-soft hover:border-ink hover:bg-ink hover:text-paper focus-visible:bg-ink focus-visible:text-paper md:p-8"
     >
       <KMark className="pointer-events-none absolute -right-10 -bottom-10 size-56 text-grey-100 transition-[color,transform] duration-700 ease-out-soft group-hover:-rotate-6 group-hover:text-grey-900" />
 

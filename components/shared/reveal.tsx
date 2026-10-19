@@ -8,20 +8,27 @@ type RevealProps = {
   delay?: number;
   className?: string;
   as?: "div" | "li" | "section";
+  /** data-* hooks for the motion layer (data-spotlight, data-tilt…). */
+  [data: `data-${string}`]: string | boolean | undefined;
 };
 
 /** Fades content in once when it scrolls into view. No-op with reduced motion. */
-export function Reveal({ children, delay = 0, className, as = "div" }: RevealProps) {
+export function Reveal({ children, delay = 0, className, as = "div", ...data }: RevealProps) {
   const reduce = useReducedMotion();
   const Tag = motion[as];
 
   if (reduce) {
     const Static = as;
-    return <Static className={className}>{children}</Static>;
+    return (
+      <Static className={className} {...data}>
+        {children}
+      </Static>
+    );
   }
 
   return (
     <Tag
+      {...data}
       className={className}
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}

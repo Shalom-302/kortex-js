@@ -26,7 +26,7 @@ export async function Footer() {
   ];
 
   return (
-    <footer className="relative isolate overflow-hidden border-t border-grey-800 bg-ink text-paper">
+    <footer data-dark className="relative isolate overflow-hidden border-t border-grey-800 bg-ink text-paper">
       <KAtom className="pointer-events-none absolute -right-28 -bottom-32 -z-10 size-[30rem] text-grey-900 md:-right-16 md:size-[42rem]" />
 
       <div className="container-page grid gap-14 py-20 md:grid-cols-12 md:py-24">

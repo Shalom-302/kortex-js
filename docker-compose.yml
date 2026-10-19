@@ -7,7 +7,7 @@ services:
     environment:
       NODE_ENV: production
       RESEND_API_KEY: ${RESEND_API_KEY}
-      # Empty = defaults in app/api/contact/route.ts (founder's Gmail, Resend test sender).
+      # Empty = defaults in app/api/contact/route.ts (Resend test sender → founder's Gmail).
       CONTACT_TO_EMAIL: ${CONTACT_TO_EMAIL:-}
       CONTACT_FROM_EMAIL: ${CONTACT_FROM_EMAIL:-}
     expose:

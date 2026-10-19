@@ -3,16 +3,20 @@ import { setRequestLocale } from "next-intl/server";
 import { CtaBand } from "@/components/shared/cta-band";
 import { About } from "@/components/home/about";
 import { Approach } from "@/components/home/approach";
+import { Gallery } from "@/components/home/gallery";
 import { Hero } from "@/components/home/hero";
+import { Immersion } from "@/components/home/immersion";
 import { UniverseMarquee } from "@/components/home/universe-marquee";
 import { UNIVERSES } from "@/data/universes";
 import { Manifesto } from "@/components/home/manifesto";
 import { Services } from "@/components/home/services";
 import { Universes } from "@/components/home/universes";
 import { Vision } from "@/components/home/vision";
+import { Work } from "@/components/home/work";
 
 // Reading order follows the brand hierarchy:
-// KORTEX → an ecosystem → DESIGN / AI / TRAINING → the other universes → offers → contact.
+// KORTEX (flight into the K) → immersion → an ecosystem → DESIGN / AI / TRAINING → the work in
+// motion → offers → delivered work → approach → the other universes → contact.
 export default async function HomePage({ params }: PageProps<"/[locale]">) {
   const { locale } = await params;
   setRequestLocale(locale as Locale);
@@ -20,12 +24,15 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
   return (
     <>
       <Hero />
+      <Immersion />
       <UniverseMarquee items={UNIVERSES.map((u) => `KORTEX ${u.name}`)} />
       <Manifesto />
       <Universes />
-      <Vision />
+      <Gallery />
       <Services />
+      <Work />
       <Approach />
+      <Vision />
       <About />
       <CtaBand />
     </>

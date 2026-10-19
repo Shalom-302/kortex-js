@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "KORTEX | Technology • Creativity • Experiences",
-    "description": "KORTEX is an Ivorian brand that uses technology to create products, services and experiences across several universes: design, artificial intelligence, training, and beyond."
+    "title": "KORTEX DIGITAL | Technology • Creativity • Experiences",
+    "description": "KORTEX DIGITAL is an Ivorian technology company based in Abidjan: design, artificial intelligence, web development and training. The KORTEX brand creates products, services and experiences across several universes."
   },
   "common": {
     "skipToContent": "Skip to content",
@@ -49,6 +49,13 @@
       "primary": "Discover KORTEX",
       "scroll": "Scroll"
     },
+    "immersion": {
+      "eyebrow": "Immersion",
+      "before": "Step into",
+      "after": "the KORTEX universe",
+      "title": "Digital, seen from the inside.",
+      "text": "Code, circuits, data, design: at KORTEX, technology is not a backdrop. It is the material we build every universe with."
+    },
     "manifesto": {
       "eyebrow": "The brand",
       "title": "More than a company, an ecosystem.",
@@ -67,6 +74,49 @@
       "text": "Three universes carry KORTEX’s activity today. Others are taking shape, at their own pace, on the same technology foundation.",
       "cta": "Explore all universes"
     },
+    "gallery": {
+      "eyebrow": "In motion",
+      "title": "Digital, in motion.",
+      "text": "What keeps the KORTEX ecosystem running, every day.",
+      "hint": "Keep scrolling",
+      "items": {
+        "circuits": {
+          "label": "KORTEX AI",
+          "title": "Systems that learn",
+          "text": "AI agents, LLMs and automation, designed around your business."
+        },
+        "design": {
+          "label": "KORTEX DESIGN",
+          "title": "Interfaces that stand out",
+          "text": "Identities, interfaces and motion design, down to the pixel."
+        },
+        "labs": {
+          "label": "Prototypes",
+          "title": "Build, test, repeat",
+          "text": "Every idea goes through the workshop before it reaches you."
+        },
+        "training": {
+          "label": "KORTEX TRAINING",
+          "title": "Passing on what we know",
+          "text": "Training and coaching to help teams grow their skills."
+        },
+        "infra": {
+          "label": "Infrastructure",
+          "title": "Solid foundations",
+          "text": "Cloud, data and deployment: invisible, but holding everything together."
+        },
+        "code": {
+          "label": "Development",
+          "title": "Clean code, shipped",
+          "text": "Websites, apps and custom tools, maintained over time."
+        },
+        "city": {
+          "label": "Abidjan → the world",
+          "title": "Rooted here, open everywhere",
+          "text": "An Ivorian brand, with ambitions beyond the local market."
+        }
+      }
+    },
     "vision": {
       "eyebrow": "Our vision",
       "title": "One brand. Many movements.",
@@ -79,6 +129,15 @@
       "title": "Clear offers to get started.",
       "text": "KORTEX’s operational universes, and what they can do for you today.",
       "cta": "All services"
+    },
+    "work": {
+      "eyebrow": "Our work",
+      "title": "Already live, already in use.",
+      "text": "Projects delivered for our clients, and the framework we built to move faster. A look at what KORTEX already does.",
+      "visit": "Visit the site",
+      "docs": "Read the docs",
+      "client": "Client project",
+      "inHouse": "Built by KORTEX"
     },
     "approach": {
       "eyebrow": "Our approach",

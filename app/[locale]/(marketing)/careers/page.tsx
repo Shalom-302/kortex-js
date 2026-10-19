@@ -25,7 +25,7 @@ export default async function CareersPage({ params }: PageProps<"/[locale]/caree
 
       <div className="container-page">
         <Reveal>
-          <Media image="careers" locale={locale} priority aspect="aspect-[4/3] md:aspect-[21/9]" sizes="(min-width: 1280px) 1200px, 100vw" />
+          <Media image="architecture" locale={locale} priority aspect="aspect-[4/3] md:aspect-[21/9]" sizes="(min-width: 1280px) 1200px, 100vw" />
         </Reveal>
       </div>
 
