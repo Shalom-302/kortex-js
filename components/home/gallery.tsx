@@ -35,7 +35,7 @@ export async function Gallery() {
       <p className="max-w-sm leading-relaxed text-grey-300">
         {brand(t("text"))}
         <span aria-hidden className="eyebrow mt-3 hidden items-center gap-3 text-grey-400 md:flex">
-          {t("hint")} <span className="inline-block h-px w-10 bg-grey-500" />
+          {t("hint")}
         </span>
       </p>
     </div>

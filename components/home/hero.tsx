@@ -18,7 +18,7 @@ export async function Hero() {
       <HeroScene className="pointer-events-none absolute inset-0 -z-10" />
       {/* Grid floor, scan line, corner brackets, live telemetry */}
       <div data-flight="hud" className="pointer-events-none absolute inset-0 -z-10">
-        <HeroHud className="absolute inset-0" />
+        <HeroHud className="absolute inset-0" labels={{ place: t("hud.place"), time: t("hud.time"), status: t("hud.status") }} />
       </div>
       {/* Very soft light from the top-left. */}
       <div

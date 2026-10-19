@@ -52,7 +52,7 @@ export function ShaapiTerminal({ className }: { className?: string }) {
           <span className="size-2.5 rounded-full bg-grey-700" />
           <span className="size-2.5 rounded-full bg-grey-700" />
           <span className="size-2.5 rounded-full bg-grey-700" />
-          <span className="ml-3 text-xs text-grey-400">~/projects — zsh</span>
+          <span className="ml-3 text-xs text-grey-400">~/projects</span>
         </div>
         <div className="flex-1 space-y-1.5 p-5 md:p-6">
           {LINES.map((line, i) => (

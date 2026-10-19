@@ -97,7 +97,6 @@ export async function Footer() {
           <Link href="/privacy" className="hover:text-paper">
             {t("privacy")}
           </Link>
-          <span>{t("photoCredits")}</span>
         </div>
       </div>
     </footer>

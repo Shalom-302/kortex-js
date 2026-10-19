@@ -38,8 +38,7 @@
     "contact": "Contact",
     "legal": "Legal notice",
     "privacy": "Privacy",
-    "rights": "All rights reserved.",
-    "photoCredits": "Temporary photography: Unsplash."
+    "rights": "All rights reserved."
   },
   "home": {
     "hero": {
@@ -47,7 +46,12 @@
       "title": "Ideas for today. Possibilities for tomorrow.",
       "subtitle": "KORTEX is an Ivorian brand that uses technology to create products, services and experiences across several universes.",
       "primary": "Discover KORTEX",
-      "scroll": "Scroll"
+      "scroll": "Scroll",
+      "hud": {
+        "place": "Abidjan · Côte d’Ivoire",
+        "time": "Local time",
+        "status": "Online"
+      }
     },
     "immersion": {
       "eyebrow": "Immersion",
@@ -250,7 +254,7 @@
     "title": "Let’s build something.",
     "text": "A project, an idea, a question? Let’s talk. We get back to you quickly.",
     "person": "Your contact",
-    "role": "Founder — KORTEX DIGITAL",
+    "role": "Founder, KORTEX DIGITAL",
     "phone": "Phone / WhatsApp",
     "whatsapp": "Message on WhatsApp",
     "email": "Email",
@@ -319,7 +323,7 @@
     "title": "Notes on technology, creation and the KORTEX universes.",
     "emptyTitle": "First articles in preparation.",
     "emptyText": "We will publish our analysis and lessons learned here. Check back soon.",
-    "draft": "Draft — visible in development only",
+    "draft": "Draft (visible in development only)",
     "backToInsights": "All articles",
     "readingTime": "{minutes} min read"
   },
@@ -343,7 +347,7 @@
     "spontaneous": "Join the KORTEX Community",
     "spontaneousText": "Developers, designers, AI enthusiasts: the community is open. We share, learn and build together.",
     "job": {
-      "title": "Open-source contributor — shaapi",
+      "title": "Open-source contributor on shaapi",
       "summary": "Join the KORTEX Community to grow shaapi, our open-source framework that scaffolds production-ready FastAPI backends in seconds.",
       "tags": {
         "type": "Volunteer · Open source",
@@ -371,7 +375,7 @@
         "community": "A place in the KORTEX Community"
       },
       "apply": "Apply by email",
-      "subject": "Application — shaapi contributor",
+      "subject": "Application: shaapi contributor",
       "repo": "See the GitHub repository",
       "docs": "Read the docs"
     },
@@ -431,7 +435,7 @@
     "whatsappSummary": "Hello KORTEX, I just sent a quote request from the website.\n\nName: {name}\nNeed: {need}\nBudget: {budget}\nTimeline: {timeline}\n\n{message}"
   },
   "email": {
-    "teamSubject": "New request — {name} ({need})",
+    "teamSubject": "New request: {name} ({need})",
     "ackSubject": "We have received your request",
     "ackGreeting": "Hello {name},",
     "ackBody": "Thank you for your message. Our team is reviewing it and will get back to you within 2 business days.",
@@ -440,7 +444,7 @@
   "legal": {
     "meta": {
       "title": "Legal notice",
-      "description": "Legal notice for the KORTEX website — KORTEX DIGITAL."
+      "description": "Legal notice for the KORTEX DIGITAL website."
     },
     "title": "Legal notice",
     "notice": "The RCCM registration number will be added once received.",
@@ -455,11 +459,11 @@
       },
       "host": {
         "title": "Hosting",
-        "body": "Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, United States — vercel.com"
+        "body": "Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, United States (vercel.com)"
       },
       "ip": {
         "title": "Intellectual property",
-        "body": "All content on this site (text, visuals, the “K” logo, code) is the property of KORTEX DIGITAL unless stated otherwise. Temporary photographs come from Unsplash and remain the property of their authors."
+        "body": "All content on this site (text, visuals, the “K” logo, code) is the property of KORTEX DIGITAL unless stated otherwise."
       }
     }
   },
@@ -473,7 +477,7 @@
     "sections": {
       "controller": {
         "title": "Data controller",
-        "body": "KORTEX DIGITAL, Cocody, Angré Extension Château – Latrille-Bessikoi, Abidjan, Côte d’Ivoire — {email}"
+        "body": "KORTEX DIGITAL, Cocody, Angré Extension Château – Latrille-Bessikoi, Abidjan, Côte d’Ivoire. Email: {email}"
       },
       "data": {
         "title": "Data collected",
@@ -485,7 +489,7 @@
       },
       "retention": {
         "title": "Retention period",
-        "body": "[Period to be completed — for example 3 years after the last contact.]"
+        "body": "[Period to be completed, for example 3 years after the last contact.]"
       },
       "processors": {
         "title": "Processors",

@@ -13,10 +13,10 @@ const abidjanTime = () =>
 
 /**
  * Futuristic frame around the hero: a perspective grid flowing toward the viewer,
- * a slow scan line, targeting brackets in the corners and a live telemetry readout
- * (Abidjan coordinates and local time). Pure decoration, hidden from assistive tech.
+ * a slow scan line, targeting brackets in the corners and a live readout
+ * (city, local time, online status). Pure decoration, hidden from assistive tech.
  */
-export function HeroHud({ className }: { className?: string }) {
+export function HeroHud({ className, labels }: { className?: string; labels: { place: string; time: string; status: string } }) {
   const root = useRef<HTMLDivElement>(null);
   const [time, setTime] = useState("--:--:--");
 
@@ -69,19 +69,19 @@ export function HeroHud({ className }: { className?: string }) {
           <Corner className="right-0 bottom-0 rotate-180" />
           <Corner className="bottom-0 left-0 -rotate-90" />
 
-          <div className="absolute top-6 right-6 flex flex-col items-end gap-1.5 font-mono text-[0.6875rem] leading-none tracking-[0.12em] text-grey-400">
+          <div className="absolute top-6 right-6 flex flex-col items-end gap-1.5 font-mono text-[0.6875rem] leading-none tracking-[0.12em] text-grey-400 uppercase">
             <span data-hud="line">
-              <span data-hud="code">05°20′N · 04°01′W</span>
+              <span data-hud="code">{labels.place}</span>
             </span>
             <span data-hud="line" className="tabular-nums">
-              ABJ {time} GMT
+              {labels.time} {time}
             </span>
             <span data-hud="line" className="flex items-center gap-2">
               <span className="relative flex size-1.5">
                 <span className="absolute inset-0 animate-ping rounded-full bg-paper/60" />
                 <span className="relative size-1.5 rounded-full bg-paper" />
               </span>
-              <span data-hud="code">SYS ONLINE</span>
+              <span data-hud="code">{labels.status}</span>
             </span>
           </div>
         </div>

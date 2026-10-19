@@ -19,9 +19,8 @@ export async function ExpansionList({ locale }: { locale: Locale }) {
         const items = EXPANSION_UNIVERSES.filter((u) => u.family === family);
         return (
           <div key={family}>
-            <Reveal className="flex items-center gap-4">
-              <h4 className="eyebrow shrink-0 text-grey-500">{decode(t(`families.${family}`))}</h4>
-              <span aria-hidden className="h-px flex-1 bg-grey-200" />
+            <Reveal className="flex items-center justify-between gap-4">
+              <h4 className="eyebrow text-grey-500">{decode(t(`families.${family}`))}</h4>
               <span className="font-mono text-xs text-grey-500">{String(items.length).padStart(2, "0")}</span>
             </Reveal>
             <ExpansionGrid className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
