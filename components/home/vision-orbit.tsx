@@ -14,6 +14,9 @@ type OrbitProps = {
 const INNER_R = 150;
 const OUTER_R = 300;
 const TICKS_R = 350;
+// Seconds per full turn: slow enough to read the labels, fast enough to feel alive.
+const CORE_TURN = 45;
+const OUTER_TURN = 80;
 const TICKS = Array.from({ length: 72 }, (_, i) => i * 5);
 
 const point = (r: number, i: number, n: number, offset = -90) => {
@@ -39,8 +42,8 @@ export function VisionOrbit({ core, expansion, className }: OrbitProps) {
         gsap.from("[data-orbit=tick]", { opacity: 0, scaleY: 0, transformOrigin: "50% 100%", stagger: 0.01, ease: "none", scrollTrigger: trigger });
         gsap.fromTo("[data-orbit=dial]", { drawSVG: "50% 50%" }, { drawSVG: "0% 100%", ease: "none", scrollTrigger: trigger });
 
-        gsap.to("[data-orbit=comet-inner]", { rotation: 360, svgOrigin: "0 0", duration: 9, repeat: -1, ease: "none" });
-        gsap.to("[data-orbit=comet-outer]", { rotation: -360, svgOrigin: "0 0", duration: 22, repeat: -1, ease: "none" });
+        gsap.to("[data-orbit=comet-inner]", { rotation: 360, svgOrigin: "0 0", duration: 6, repeat: -1, ease: "none" });
+        gsap.to("[data-orbit=comet-outer]", { rotation: -360, svgOrigin: "0 0", duration: 14, repeat: -1, ease: "none" });
 
         gsap.fromTo(
           "[data-orbit=pulse]",
@@ -94,10 +97,10 @@ export function VisionOrbit({ core, expansion, className }: OrbitProps) {
         </>
       )}
       <motion.g {...beat(0.5)}>
-        <circle r={INNER_R} stroke="currentColor" strokeOpacity="0.28" strokeDasharray="1 6" />
+        <circle r={INNER_R} stroke="currentColor" strokeOpacity="0.4" strokeDasharray="1 6" />
       </motion.g>
       <motion.g {...beat(1)}>
-        <circle r={OUTER_R} stroke="currentColor" strokeOpacity="0.16" strokeDasharray="2 10" />
+        <circle r={OUTER_R} stroke="currentColor" strokeOpacity="0.25" strokeDasharray="2 10" />
       </motion.g>
 
       {/* Centre */}
@@ -109,14 +112,15 @@ export function VisionOrbit({ core, expansion, className }: OrbitProps) {
 
       {/* Core universes */}
       <motion.g {...beat(0.5)}>
-        <Ring duration={140}>
+        <Ring duration={CORE_TURN}>
           {core.map((label, i) => {
             const p = point(INNER_R, i, core.length);
             return (
               <g key={label} transform={`translate(${p.x} ${p.y})`}>
-                <circle r="5" fill="currentColor" />
-                <Upright duration={140}>
-                  <text y="-16" textAnchor="middle" fill="currentColor" fontSize="16" fontWeight="600" letterSpacing="1.5">
+                <circle r="6" fill="currentColor" />
+                <Upright duration={CORE_TURN}>
+                  {/* Larger type on phones, where the whole diagram is drawn small. */}
+                  <text y="-16" textAnchor="middle" fill="currentColor" fontSize="16" fontWeight="600" letterSpacing="1.5" className="max-sm:text-[26px]">
                     {label}
                   </text>
                 </Upright>
@@ -128,21 +132,21 @@ export function VisionOrbit({ core, expansion, className }: OrbitProps) {
 
       {/* Expansion universes */}
       <motion.g {...beat(1)}>
-        <Ring duration={260} reverse>
+        <Ring duration={OUTER_TURN} reverse>
           {expansion.map((label, i) => {
             const p = point(OUTER_R, i, expansion.length, -75);
             return (
               <g key={label} transform={`translate(${p.x} ${p.y})`}>
-                <circle r="3" fill="currentColor" fillOpacity="0.5" />
-                <Upright duration={260} reverse>
+                <circle r="4" fill="currentColor" fillOpacity="0.7" />
+                <Upright duration={OUTER_TURN} reverse>
                   <text
-                    y="-11"
+                    y="-13"
                     textAnchor="middle"
                     fill="currentColor"
-                    fillOpacity="0.55"
+                    fillOpacity="0.7"
                     fontSize="12"
                     letterSpacing="1.5"
-                    className="max-sm:hidden"
+                    className="max-sm:text-[19px]"
                   >
                     {label}
                   </text>

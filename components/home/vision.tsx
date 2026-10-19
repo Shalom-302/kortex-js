@@ -32,7 +32,7 @@ export async function Vision() {
           <VisionOrbit
             core={CORE_UNIVERSES.map((u) => u.name)}
             expansion={EXPANSION_UNIVERSES.map((u) => u.name)}
-            className="mx-auto w-full max-w-[40rem] text-paper"
+            className="-mx-[8%] w-[116%] max-w-none text-paper sm:mx-auto sm:w-full sm:max-w-[40rem]"
           />
           <p className="sr-only">{t("diagramLabel")}</p>
         </div>
